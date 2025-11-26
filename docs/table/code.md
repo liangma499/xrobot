@@ -1,0 +1,16 @@
+- 0 成功（ok）
+- 1 请求被取消（canceled）
+- 2 未知错误（unknown）
+- 3 无效参数（invalid argument）
+- 4 执行超时（deadline exceeded）
+- 5 未找到相关资源（not found）
+- 6 服务器内部错误（internal error）
+- 7 未授权（unauthorized）
+- 8 非法调用（illegal invoke）
+- 9 非法请求（illegal request）
+- 100 授权已过期 (authorization expired)
+- 101 异地登录 (authorization elsewhere)
+- 102 暂无权限 (no permission)
+- 103 非法操作 (illegal operation)
+- 104 账号或密码错误 (incorrect account or password)
+- 105 密码错误 (incorrect password)

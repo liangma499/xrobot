@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+package pb;
+
+service Basic {
+  // 发送邮件验证码
+  rpc SendEmailCode(SendEmailCodeArgs) returns (SendEmailCodeReply) {}
+  // 校验邮件验证码
+  rpc VerifyEmailCode(VerifyEmailCodeArgs) returns (VerifyEmailCodeReply) {}
+
+}
+
+message SendEmailCodeArgs {
+  string Email = 1; // 邮箱
+  string Language = 2; //语言
+}
+
+message SendEmailCodeReply {
+
+}
+
+message VerifyEmailCodeArgs {
+  string Email = 1; // 邮箱
+  string Code = 2; // 验证码
+}
+
+message VerifyEmailCodeReply {
+
+}

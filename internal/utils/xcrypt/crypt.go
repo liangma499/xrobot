@@ -1,0 +1,29 @@
+package xcrypt
+
+import (
+	"tron_robot/internal/utils/xhash"
+	"xbase/errors"
+
+	"golang.org/x/crypto/bcrypt"
+)
+
+// Encrypt 加密
+func Encrypt(password, salt string) (string, error) {
+	password = xhash.MD5(xhash.MD5(password) + salt)
+	buf, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if err != nil {
+		return "", err
+	}
+	return string(buf), nil
+}
+
+// Compare 对比秘钥
+func Compare(hashed, password, salt string) (bool, error) {
+	password = xhash.MD5(xhash.MD5(password) + salt)
+	err := bcrypt.CompareHashAndPassword([]byte(hashed), []byte(password))
+	if errors.Is(err, bcrypt.ErrMismatchedHashAndPassword) {
+		return false, nil
+	}
+
+	return err == nil, err
+}

@@ -1,0 +1,20 @@
+[mysql]
+    # 默认
+    [mysql.default]
+        # dsn连接信息
+        dsn = "root:wtes566RedPwd@tcp(149.28.149.235:3306)/cr.xrobot?charset=utf8mb4&parseTime=True&loc=Local"
+        # 日志级别; silent | error | warn | info
+        logLevel = "error"
+        # 慢日志阈值;ms
+        slowThreshold = 200
+        #最大连空闲接数
+        maxIdleConns = 256
+        #最大连接数
+        maxOpenConns = 1024
+        #最大连接数
+        connMaxLifetime = 300
+[truncate]
+    # 要忽略清空的表
+    # ignoreTables = ["bank","currency"]
+    ignoreTables = ["config","currency","currency_channel","currency_platform","game","game_provider","currency","channel_cfg"]
+    dataBaseName = "cr.xrobot"

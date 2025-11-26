@@ -1,0 +1,2278 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/basic/upload": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "基础模块"
+                ],
+                "summary": "上传文件",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/basic.uploadResData"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/check-user-card": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "检查充值",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.checkUserCardResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-balance-deposit-transaction-list": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "充值记录",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.fetchBalanceDepositTransactionListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.fetchBalanceDepositTransactionListResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-card-cfg-list": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "拉取卡片基础配置",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/card.fetchCardCfgListResp"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-card-list": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "卡片列表",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.fetchUserCardListInfoResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-currency-list": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "拉取币种配置",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/card.fetchCurrencyListResp"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-transaction-list": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "消费记录",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.fetchTransactionListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.fetchTransactionListResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-user-card-cvv": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "查看用户CVV",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.fetchUserCardCvvReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.fetchUserCardCvvResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-user-card-password-status": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "拉取用户支付密码信息",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.failetchUserCardPasswordStatusResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-user-card-recharge-info": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "用户充值信息",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.fetchUserCardRechargeInfoReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.fetchUserCardRechargeInfoResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-user-invite-info": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "用户推广信息",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/card.fetchUserInviteInfoResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/fetch-withdraw-cfg-list": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "拉取提现配置",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.fetchWithdrawCfgListReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/card.fetchWithdrawCfgListResp"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/pre-create": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "开卡",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.preCreateReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/definitions/card.fetchCardCfgListResp"
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/card/set-user-card-password": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "设置支付密码",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.setUserCardPasswordReq"
+                        }
+                    }
+                ],
+                "responses": {}
+            }
+        },
+        "/card/user-withdraw": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "卡片模块"
+                ],
+                "summary": "用户提现",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/card.userWithdrawResp"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/passport/login": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "注册登录"
+                ],
+                "summary": "登录",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/passport.loginReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/definitions/passport.loginResData"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/passport/register": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "注册登录"
+                ],
+                "summary": "注册",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/passport.registerReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/passport/reset-password": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "注册登录"
+                ],
+                "summary": "重置密码",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/passport.resetPasswordReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/passport/send-email-code": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "注册登录"
+                ],
+                "summary": "发送验证码",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/passport.sendEmailCodeReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/passport/telegram-login": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "注册登录"
+                ],
+                "summary": "Telegram登录",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/passport.telegramLoginReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/passport.telegramLoginResData"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/user/bind-email": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "绑定邮箱",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.bindEmailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/fetch-invite-url": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "拉取推广链接",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/user.fetchInviteUrlResp"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/user/fetch-profile": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "拉取个人信息",
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/user.fetchProfileResData"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/user/fetch-user-profile": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "拉取用户个人信息（第三视角）",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.fetchUserProfileReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "allOf": [
+                                {
+                                    "$ref": "#/definitions/define.Res"
+                                },
+                                {
+                                    "type": "object",
+                                    "properties": {
+                                        "Data": {
+                                            "$ref": "#/definitions/user.fetchUserProfileResData"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "/user/modify-avatar": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "修改头像",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.modifyAvatarReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/modify-birthday": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "修改生日",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.modifyBirthdayReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/modify-language": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "修改昵称",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.modifyLanguageReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/modify-nickname": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "修改昵称",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.modifyNicknameReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/modify-password": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "修改密码",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.modifyPasswordReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/set-password": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "设置密码",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.setPasswordReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/verify-email": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "用户模块"
+                ],
+                "summary": "验证邮箱",
+                "parameters": [
+                    {
+                        "description": "请求参数",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/user.verifyEmailReq"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "响应参数",
+                        "schema": {
+                            "$ref": "#/definitions/define.Res"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "basic.uploadResData": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "文件名",
+                    "type": "string"
+                },
+                "path": {
+                    "description": "文件路径",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "文件链接",
+                    "type": "string"
+                }
+            }
+        },
+        "card.balanceDepositTransaction": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "description": "交易金额",
+                    "type": "string"
+                },
+                "createTime": {
+                    "description": "创建时间",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "交易唯一id\t“48763843”",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "\"Deposit\",\"Whale card fee\",\"Whale card\"",
+                    "type": "string"
+                }
+            }
+        },
+        "card.cardInfo": {
+            "type": "object",
+            "properties": {
+                "addressLine": {
+                    "description": "地址【可选】\t如果在美国使用，建议传递这类信息，大部分美国商户需要地址信息",
+                    "type": "string"
+                },
+                "balance": {
+                    "description": "余额",
+                    "type": "string"
+                },
+                "cardId": {
+                    "description": "用户预算卡id “48763843”",
+                    "type": "string"
+                },
+                "cardNo": {
+                    "description": "卡号",
+                    "type": "string"
+                },
+                "cardStatus": {
+                    "description": "Active,Frozen,inactive",
+                    "type": "string"
+                },
+                "cardType": {
+                    "description": "\"VISA\",\"MASTER\",\"VISA_PREMIUM\"\t默认 VISA",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "【可选】",
+                    "type": "string"
+                },
+                "country": {
+                    "description": "【可选】",
+                    "type": "string"
+                },
+                "cvv": {
+                    "description": "cvv",
+                    "type": "string"
+                },
+                "expireMonth": {
+                    "type": "string"
+                },
+                "expireYear": {
+                    "type": "string"
+                },
+                "name": {
+                    "description": "用户名",
+                    "type": "string"
+                },
+                "postalCode": {
+                    "description": "【可选】",
+                    "type": "string"
+                }
+            }
+        },
+        "card.cardTransaction": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "description": "Magnitude of the amount.",
+                    "type": "string"
+                },
+                "cardId": {
+                    "type": "string"
+                },
+                "createTime": {
+                    "description": "date-time\tTransaction creation time.ISO-8601 UTC date/time format",
+                    "type": "string"
+                },
+                "currency": {
+                    "description": "Currency code.\tUSD",
+                    "type": "string"
+                },
+                "detail": {
+                    "description": "Transaction detail.\t\"WALMART.COM 8009666546 BENTONVILLE AR US\"",
+                    "type": "string"
+                },
+                "fee": {
+                    "description": "Transaction fee",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "交易唯一id\t“48763843”",
+                    "type": "string"
+                },
+                "remark": {
+                    "description": "Transaction failure Remarks.\t\"No sufficient funds\"",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "Transaction status.\tPending Closed Fail",
+                    "type": "string"
+                },
+                "transactionTime": {
+                    "description": "date-time\tOrder trading time.ISO-8601 UTC date/time format.",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "Transaction type\tConsumption TransferIn TransferOut Credit Reversal Frozen UnFrozen",
+                    "type": "string"
+                }
+            }
+        },
+        "card.checkUserCardResp": {
+            "type": "object",
+            "properties": {
+                "additionalAmountRequired": {
+                    "description": "开卡还需要的金额",
+                    "type": "string"
+                }
+            }
+        },
+        "card.currencyChannelInfo": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "description": "充值地址",
+                    "type": "string"
+                },
+                "card_open_fee": {
+                    "description": "开卡费用",
+                    "type": "string"
+                },
+                "channel": {
+                    "description": "网络渠道",
+                    "type": "string"
+                },
+                "collect_fee": {
+                    "description": "归集费用",
+                    "type": "string"
+                },
+                "confirmation": {
+                    "type": "string"
+                },
+                "gasFee": {
+                    "description": "Gas费",
+                    "type": "string"
+                },
+                "minutes": {
+                    "type": "string"
+                },
+                "pay_currency": {
+                    "type": "string"
+                },
+                "second": {
+                    "type": "string"
+                },
+                "top_up_fee": {
+                    "description": "手续费",
+                    "type": "string"
+                }
+            }
+        },
+        "card.currencyInfo": {
+            "type": "object",
+            "properties": {
+                "channelList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/card.currencyChannelInfo"
+                    }
+                },
+                "currency": {
+                    "type": "string"
+                }
+            }
+        },
+        "card.failetchUserCardPasswordStatusResp": {
+            "type": "object",
+            "properties": {
+                "isSet": {
+                    "description": "true:已经设置密码 false:未设置",
+                    "type": "boolean"
+                }
+            }
+        },
+        "card.fetchBalanceDepositTransactionListReq": {
+            "type": "object",
+            "required": [
+                "cardId",
+                "limit",
+                "page"
+            ],
+            "properties": {
+                "cardId": {
+                    "description": "用户预算卡id “48763843”",
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 6
+                },
+                "limit": {
+                    "description": "每页大小",
+                    "type": "integer",
+                    "maximum": 100,
+                    "minimum": 1
+                },
+                "page": {
+                    "description": "当前页码",
+                    "type": "integer",
+                    "minimum": 1
+                }
+            }
+        },
+        "card.fetchBalanceDepositTransactionListResp": {
+            "type": "object",
+            "properties": {
+                "cardId": {
+                    "type": "string"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/card.balanceDepositTransaction"
+                    }
+                },
+                "pages": {
+                    "description": "获取第一页",
+                    "type": "string"
+                },
+                "total": {
+                    "description": "总数",
+                    "type": "string"
+                }
+            }
+        },
+        "card.fetchCardCfgListResp": {
+            "type": "object",
+            "properties": {
+                "area": {
+                    "description": "地区",
+                    "type": "string"
+                },
+                "card_currency": {
+                    "description": "卡支持的币种",
+                    "type": "string"
+                },
+                "card_open_fee": {
+                    "description": "开卡费用 只认USTD",
+                    "type": "string"
+                },
+                "card_type": {
+                    "description": "VISA=订阅卡;VISA_PREMIUM=支付卡",
+                    "type": "string"
+                },
+                "first_card_open_fee": {
+                    "description": "第一次开卡优惠",
+                    "type": "string"
+                },
+                "is_first_card": {
+                    "description": "是否是第一次开卡",
+                    "type": "boolean"
+                },
+                "month_fee": {
+                    "description": "月费",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "卡名",
+                    "type": "string"
+                },
+                "pay_currency": {
+                    "description": "支付币种",
+                    "type": "string"
+                },
+                "premium": {
+                    "description": "手续费",
+                    "type": "string"
+                },
+                "top_up_fee": {
+                    "description": "Gas费用",
+                    "type": "string"
+                }
+            }
+        },
+        "card.fetchCurrencyListResp": {
+            "type": "object",
+            "properties": {
+                "currency": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "card.fetchTransactionListReq": {
+            "type": "object",
+            "required": [
+                "cardId",
+                "limit",
+                "page"
+            ],
+            "properties": {
+                "cardId": {
+                    "description": "用户预算卡id “48763843”",
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 6
+                },
+                "limit": {
+                    "description": "每页大小",
+                    "type": "integer",
+                    "maximum": 100,
+                    "minimum": 1
+                },
+                "page": {
+                    "description": "当前页码",
+                    "type": "integer",
+                    "minimum": 1
+                }
+            }
+        },
+        "card.fetchTransactionListResp": {
+            "type": "object",
+            "properties": {
+                "cardId": {
+                    "type": "string"
+                },
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/card.cardTransaction"
+                    }
+                },
+                "pages": {
+                    "description": "获取第一页",
+                    "type": "string"
+                },
+                "total": {
+                    "description": "总数",
+                    "type": "string"
+                }
+            }
+        },
+        "card.fetchUserCardCvvReq": {
+            "type": "object",
+            "required": [
+                "cardId",
+                "password"
+            ],
+            "properties": {
+                "cardId": {
+                    "description": "用户预算卡id “48763843”",
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 6
+                },
+                "password": {
+                    "description": "密码",
+                    "type": "string",
+                    "maxLength": 16,
+                    "minLength": 6
+                }
+            }
+        },
+        "card.fetchUserCardCvvResp": {
+            "type": "object",
+            "properties": {
+                "cardInfo": {
+                    "description": "cvv",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/card.cardInfo"
+                        }
+                    ]
+                }
+            }
+        },
+        "card.fetchUserCardListInfoResp": {
+            "type": "object",
+            "properties": {
+                "list": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/card.cardInfo"
+                    }
+                }
+            }
+        },
+        "card.fetchUserCardRechargeInfoReq": {
+            "type": "object",
+            "required": [
+                "cardId"
+            ],
+            "properties": {
+                "cardId": {
+                    "description": "用户预算卡id “48763843”",
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 6
+                }
+            }
+        },
+        "card.fetchUserCardRechargeInfoResp": {
+            "type": "object",
+            "properties": {
+                "currencyList": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/card.currencyInfo"
+                    }
+                }
+            }
+        },
+        "card.fetchUserInviteInfoResp": {
+            "type": "object",
+            "properties": {
+                "points": {
+                    "description": "积分",
+                    "type": "string"
+                },
+                "pointsChildRatio": {
+                    "description": "别人充值积分比例",
+                    "type": "string"
+                },
+                "pointsMineRatio": {
+                    "description": "自己充值积分比例",
+                    "type": "string"
+                },
+                "userInviteInfo": {
+                    "$ref": "#/definitions/card.userInviteInfo"
+                }
+            }
+        },
+        "card.fetchWithdrawCfgListReq": {
+            "type": "object",
+            "properties": {
+                "cardId": {
+                    "type": "string"
+                },
+                "withdrawType": {
+                    "type": "string",
+                    "enum": [
+                        "commission",
+                        "card"
+                    ]
+                }
+            }
+        },
+        "card.fetchWithdrawCfgListResp": {
+            "type": "object",
+            "properties": {
+                "amount": {
+                    "description": "余额",
+                    "type": "string"
+                },
+                "currencyList": {
+                    "description": "CurrencyList []*whithdrawCurrencyInfo `json:\"currencyList\"`",
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "$ref": "#/definitions/card.whithdrawCurrencyChannelInfo"
+                        }
+                    }
+                }
+            }
+        },
+        "card.preCreateReq": {
+            "type": "object",
+            "required": [
+                "firstName",
+                "lastName",
+                "phone",
+                "phoneCode"
+            ],
+            "properties": {
+                "addressLine": {
+                    "description": "地址【可选】如果在美国使用，建议传递这类信息，大部分美国商户需要地址信息",
+                    "type": "string",
+                    "maxLength": 256
+                },
+                "bin": {
+                    "description": "【可选】",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "cardType": {
+                    "description": "\"VISA\",\"MASTER\",\"VISA_PREMIUM\"\t默认 VISA",
+                    "type": "string",
+                    "enum": [
+                        "VISA",
+                        "MASTER",
+                        "VISA_PREMIUM"
+                    ]
+                },
+                "city": {
+                    "description": "【可选】",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "country": {
+                    "description": "【可选】",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "email": {
+                    "description": "【可选】",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "firstName": {
+                    "description": "姓",
+                    "type": "string",
+                    "maxLength": 128,
+                    "minLength": 1
+                },
+                "lastName": {
+                    "description": "名",
+                    "type": "string",
+                    "maxLength": 128,
+                    "minLength": 1
+                },
+                "password": {
+                    "description": "【可选】",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "phone": {
+                    "description": "需填写真实手机号，有些使用场景需要手机接收验证码\t“334345637”",
+                    "type": "string",
+                    "maxLength": 16,
+                    "minLength": 5
+                },
+                "phoneCode": {
+                    "description": "手机区域码\t“+85”",
+                    "type": "string",
+                    "maxLength": 16,
+                    "minLength": 1
+                },
+                "postalCode": {
+                    "description": "【可选】",
+                    "type": "string",
+                    "maxLength": 16
+                }
+            }
+        },
+        "card.setUserCardPasswordReq": {
+            "type": "object",
+            "required": [
+                "password"
+            ],
+            "properties": {
+                "password": {
+                    "description": "密码",
+                    "type": "string",
+                    "maxLength": 16,
+                    "minLength": 6
+                }
+            }
+        },
+        "card.userInviteInfo": {
+            "type": "object",
+            "properties": {
+                "cardUser": {
+                    "description": "开卡用户数",
+                    "type": "integer"
+                },
+                "commission": {
+                    "description": "佣金",
+                    "type": "string"
+                },
+                "commissionChildCard": {
+                    "description": "子级建卡得的佣金",
+                    "type": "string"
+                },
+                "commissionRatio": {
+                    "description": "子级充值佣金比例",
+                    "type": "string"
+                },
+                "inviteUser": {
+                    "description": "邀请用户数",
+                    "type": "integer"
+                }
+            }
+        },
+        "card.userWithdrawResp": {
+            "type": "object",
+            "required": [
+                "address",
+                "amount",
+                "currency",
+                "network"
+            ],
+            "properties": {
+                "address": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "minLength": 16
+                },
+                "amount": {
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 1
+                },
+                "cardId": {
+                    "type": "string"
+                },
+                "currency": {
+                    "type": "string",
+                    "enum": [
+                        "USDT"
+                    ]
+                },
+                "network": {
+                    "type": "string",
+                    "maxLength": 64,
+                    "minLength": 1
+                },
+                "withdrawType": {
+                    "type": "string",
+                    "enum": [
+                        "commission",
+                        "card"
+                    ]
+                }
+            }
+        },
+        "card.whithdrawCurrencyChannelInfo": {
+            "type": "object",
+            "properties": {
+                "channel": {
+                    "type": "string"
+                },
+                "currency": {
+                    "type": "string"
+                },
+                "gas_fee": {
+                    "type": "string"
+                },
+                "max": {
+                    "type": "string"
+                },
+                "min": {
+                    "type": "string"
+                },
+                "premium": {
+                    "type": "string"
+                },
+                "remainderMin": {
+                    "type": "string"
+                }
+            }
+        },
+        "define.Res": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "integer"
+                },
+                "data": {}
+            }
+        },
+        "passport.loginReq": {
+            "type": "object",
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "city": {
+                    "description": "城市",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "country": {
+                    "description": "国家",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "deviceID": {
+                    "description": "设备ID",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "deviceModel": {
+                    "description": "设备型号",
+                    "type": "string",
+                    "maxLength": 100
+                },
+                "deviceType": {
+                    "description": "设备类型 设备类型(0 无 1=android、2=ios、3=web)",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                "email": {
+                    "description": "账号",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "密码",
+                    "type": "string",
+                    "maxLength": 20,
+                    "minLength": 6
+                }
+            }
+        },
+        "passport.loginResData": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "Token",
+                    "type": "string"
+                }
+            }
+        },
+        "passport.registerReq": {
+            "type": "object",
+            "required": [
+                "email",
+                "password"
+            ],
+            "properties": {
+                "channel": {
+                    "description": "渠道",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "城市",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "country": {
+                    "description": "国家",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "deviceID": {
+                    "description": "设备ID",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "deviceModel": {
+                    "description": "设备型号",
+                    "type": "string",
+                    "maxLength": 100
+                },
+                "deviceType": {
+                    "description": "设备类型 设备类型(0 无 1=android、2=ios、3=web)",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                "email": {
+                    "description": "账号",
+                    "type": "string"
+                },
+                "inviteCode": {
+                    "description": "邀请码",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "密码",
+                    "type": "string",
+                    "maxLength": 20,
+                    "minLength": 6
+                }
+            }
+        },
+        "passport.resetPasswordReq": {
+            "type": "object",
+            "required": [
+                "password"
+            ],
+            "properties": {
+                "code": {
+                    "description": "验证码",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "邮箱",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "密码",
+                    "type": "string",
+                    "maxLength": 20,
+                    "minLength": 6
+                }
+            }
+        },
+        "passport.sendEmailCodeReq": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "description": "邮箱",
+                    "type": "string"
+                },
+                "language": {
+                    "description": "语言 th:泰语 en:英语 pt:葡萄亚语 支持 如果没有支持的就发英语",
+                    "type": "string"
+                }
+            }
+        },
+        "passport.telegramLoginReq": {
+            "type": "object",
+            "required": [
+                "userID"
+            ],
+            "properties": {
+                "avatar": {
+                    "description": "头像",
+                    "type": "string"
+                },
+                "channel": {
+                    "type": "string"
+                },
+                "city": {
+                    "description": "城市",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "country": {
+                    "description": "国家",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "deviceID": {
+                    "description": "设备ID",
+                    "type": "string",
+                    "maxLength": 128
+                },
+                "deviceModel": {
+                    "description": "设备型号",
+                    "type": "string",
+                    "maxLength": 100
+                },
+                "deviceType": {
+                    "description": "设备类型 设备类型(0 无 1=android、2=ios、3=web)",
+                    "type": "integer",
+                    "enum": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                "inviteCode": {
+                    "description": "邀请码",
+                    "type": "string"
+                },
+                "nickname": {
+                    "description": "昵称",
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "userID": {
+                    "description": "用户ID",
+                    "type": "string",
+                    "maxLength": 32,
+                    "minLength": 1
+                },
+                "userName": {
+                    "description": "用户名",
+                    "type": "string"
+                }
+            }
+        },
+        "passport.telegramLoginResData": {
+            "type": "object",
+            "properties": {
+                "token": {
+                    "description": "授权Token",
+                    "type": "string"
+                }
+            }
+        },
+        "user.bindEmailReq": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "验证码",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "邮箱",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "密码",
+                    "type": "string"
+                }
+            }
+        },
+        "user.fetchInviteUrlResp": {
+            "type": "object",
+            "properties": {
+                "inviteUrl": {
+                    "description": "推广链接",
+                    "type": "string"
+                }
+            }
+        },
+        "user.fetchProfileResData": {
+            "type": "object",
+            "properties": {
+                "avatarUrl": {
+                    "description": "头像地址",
+                    "type": "string"
+                },
+                "birthday": {
+                    "description": "生日",
+                    "type": "string"
+                },
+                "code": {
+                    "description": "User ID",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "邮箱",
+                    "type": "string"
+                },
+                "isAnonymized": {
+                    "description": "是否匿名化",
+                    "type": "boolean"
+                },
+                "isCompletedFirstRecharge": {
+                    "description": "是否完成首充",
+                    "type": "boolean"
+                },
+                "isSetPasswd": {
+                    "description": "是否需要设置密码",
+                    "type": "boolean"
+                },
+                "isVerifiedEmail": {
+                    "description": "是否验证了邮箱",
+                    "type": "boolean"
+                },
+                "nickname": {
+                    "description": "昵称",
+                    "type": "string"
+                },
+                "thirdPlatform": {
+                    "description": "三方登录  0:无 1:邮箱 2:推特 4:钱包 8:谷歌 用这个值  0表示游客 \u00261 \u003e 0表示这个账号是邮箱账号 类推 \u00262，\u00264，\u00268 大于0 表示 推特 钱包 谷歌",
+                    "type": "integer"
+                }
+            }
+        },
+        "user.fetchUserProfileReq": {
+            "type": "object",
+            "required": [
+                "code"
+            ],
+            "properties": {
+                "code": {
+                    "description": "User ID",
+                    "type": "string",
+                    "maxLength": 8,
+                    "minLength": 7
+                }
+            }
+        },
+        "user.fetchUserProfileResData": {
+            "type": "object",
+            "properties": {
+                "avatarUrl": {
+                    "description": "头像地址",
+                    "type": "string"
+                },
+                "birthday": {
+                    "description": "生日",
+                    "type": "string"
+                },
+                "code": {
+                    "description": "User ID",
+                    "type": "string"
+                },
+                "nickname": {
+                    "description": "昵称",
+                    "type": "string"
+                }
+            }
+        },
+        "user.modifyAvatarReq": {
+            "type": "object",
+            "required": [
+                "avatar"
+            ],
+            "properties": {
+                "avatar": {
+                    "description": "用户头像",
+                    "type": "string",
+                    "maxLength": 200
+                }
+            }
+        },
+        "user.modifyBirthdayReq": {
+            "type": "object",
+            "properties": {
+                "birthday": {
+                    "description": "生日",
+                    "type": "string"
+                }
+            }
+        },
+        "user.modifyLanguageReq": {
+            "type": "object",
+            "properties": {
+                "language": {
+                    "description": "邮箱",
+                    "type": "string"
+                }
+            }
+        },
+        "user.modifyNicknameReq": {
+            "type": "object",
+            "required": [
+                "nickname"
+            ],
+            "properties": {
+                "nickname": {
+                    "description": "用户昵称",
+                    "type": "string",
+                    "maxLength": 50,
+                    "minLength": 4
+                }
+            }
+        },
+        "user.modifyPasswordReq": {
+            "type": "object",
+            "required": [
+                "newPassword",
+                "oldPassword"
+            ],
+            "properties": {
+                "newPassword": {
+                    "description": "新密码",
+                    "type": "string",
+                    "maxLength": 16,
+                    "minLength": 6
+                },
+                "oldPassword": {
+                    "description": "旧密码",
+                    "type": "string",
+                    "maxLength": 16,
+                    "minLength": 6
+                }
+            }
+        },
+        "user.setPasswordReq": {
+            "type": "object",
+            "required": [
+                "password"
+            ],
+            "properties": {
+                "code": {
+                    "description": "验证码",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "邮箱",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "密码",
+                    "type": "string",
+                    "maxLength": 20,
+                    "minLength": 6
+                }
+            }
+        },
+        "user.verifyEmailReq": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "验证码",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "邮箱",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

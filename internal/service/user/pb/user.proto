@@ -1,0 +1,263 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+package pb;
+
+service User {
+  // 注册
+  rpc Register(RegisterArgs) returns (RegisterReply) {}
+  // 登录
+  rpc Login(LoginArgs) returns (LoginReply) {}
+  // 退出登录
+  rpc Logout(LogoutArgs) returns (LogoutReply) {}
+  // 修改头像
+  rpc ModifyAvatar(ModifyAvatarArgs) returns (ModifyAvatarReply) {}
+  // 修改昵称
+  rpc ModifyNickname(ModifyNicknameArgs) returns (ModifyNicknameReply) {}
+  // 修改密码
+  rpc ModifyPassword(ModifyPasswordArgs) returns (ModifyPasswordReply) {}
+  // 修改密码
+  rpc ModifyLanguage(ModifyLanguageArgs) returns (ModifyLanguageReply) {}
+  // 修改用户类型
+  rpc ModifyUserType(ModifyUserTypeArgs) returns (ModifyUserTypeReply) {}
+  // 设置密码
+  rpc SetPassword(SetPasswordArgs) returns (SetPasswordReply) {}
+  // 修改生日
+  rpc ModifyBirthday(ModifyBirthdayArgs) returns (ModifyBirthdayReply) {}
+  // 修改邮箱为已验证
+  rpc ModifyEmailVerified(ModifyEmailVerifiedArgs) returns (ModifyEmailVerifiedReply) {}
+  // 重置密码
+  rpc ResetPassword(ResetPasswordArgs) returns (ResetPasswordReply) {}
+  // 拉取用户
+  rpc FetchUser(FetchUserArgs) returns (FetchUserReply) {}
+  // 拉取用户资料
+  rpc FetchUserProfile(FetchUserProfileArgs) returns (FetchUserProfileReply) {}
+  // 检测是否存在邮箱
+  rpc ExistsEmail(ExistsEmailArgs) returns (ExistsEmailReply) {}
+  // 验证Token
+  rpc ValidateToken(ValidateTokenArgs) returns (ValidateTokenReply) {}
+  //TelegramLogin登录
+  rpc TelegramLogin(TelegramLoginArgs) returns (TelegramLoginReply) {}
+  // 绑定邮箱
+  rpc BindEmail(BindEmailArgs) returns (BindEmailReply) {}
+  // 拉取推广链接
+  rpc FetchInviteUrl(FetchInviteUrlArgs) returns (FetchInviteUrlReply) {}
+}
+message DeviceInfo {
+  string DeviceID = 1; // 设备ID
+  int32 DeviceType = 2; // 设备类型
+  string DeviceModel = 3; // 设备型号
+  string Country = 4;     // 国家
+  string City = 5;        // 城市
+}
+
+message RegisterArgs {
+  string Email = 1; // 账号
+  string Password = 2; // 密码
+  string ClientIP = 3; // 客户端IP
+  string InviteCode = 4; // 邀请码
+  string Channel = 5; // 渠道
+  string ChannelCode = 6; // 渠道码
+  DeviceInfo DeviceInfo = 8; //设备信息
+}
+
+message RegisterReply {
+  int64 UID = 1; // 用户ID
+}
+
+message LoginArgs {
+  string Email = 1; // 账号
+  string Password = 2; // 密码
+  string ClientIP = 3; // 客户端IP
+  DeviceInfo DeviceInfo = 4; //设备信息
+}
+
+message LoginReply {
+  int64 UID = 1; // Token
+}
+
+message LogoutArgs {
+  int64 UID = 1; // 用户ID
+}
+
+message LogoutReply {
+
+}
+
+message ModifyAvatarArgs {
+  int64 UID = 1; // 用户ID
+  string Avatar = 2; // 用户头像
+}
+
+message ModifyAvatarReply {
+
+}
+
+message ModifyNicknameArgs {
+  int64 UID = 1; // 用户ID
+  string Nickname = 2; // 用户昵称
+}
+
+message ModifyNicknameReply {
+
+}
+
+message ModifyPasswordArgs {
+  int64 UID = 1; // 用户ID
+  string OldPassword = 2; // 旧密码
+  string NewPassword = 3; // 新密码
+}
+
+message ModifyPasswordReply {
+
+}
+message ModifyLanguageArgs {
+  int64 UID = 1; // 用户ID
+  string Language = 2; // 语言
+}
+message ModifyLanguageReply {
+}
+
+message ModifyUserTypeArgs {
+  int64 UID = 1; // 用户ID
+  int32 UserType = 2; // 语言
+}
+message ModifyUserTypeReply {
+}
+
+message SetPasswordArgs {
+  int64 UID = 1; // 用户ID
+  string Password = 2; // 新密码
+}
+
+message SetPasswordReply {
+
+}
+
+message ModifyBirthdayArgs {
+  int64 UID = 1; // 用户ID
+  string Birthday = 2; // 生日
+}
+
+message ModifyBirthdayReply {
+
+}
+
+message ModifyEmailVerifiedArgs {
+  string Email = 1; // 邮箱
+}
+
+message ModifyEmailVerifiedReply {
+
+}
+
+message ResetPasswordArgs {
+  string Email = 1; // 邮箱
+  string Password = 2; // 密码
+}
+
+message ResetPasswordReply {
+
+}
+
+message FetchUserArgs {
+  int64 UID = 1; // 用户ID
+  string Code = 2; // 用户编号
+}
+
+message FetchUserReply {
+  UserInfo User = 1; // 用户
+}
+
+message FetchUserProfileArgs {
+  int64 UID = 1; // 用户ID
+  string Code = 2; // 用户编号
+
+}
+
+message FetchUserProfileReply {
+  UserInfo User = 1; // 用户
+}
+
+message UserInfo {
+  int64 ID = 1; // 用户ID
+  string Code = 2; // 用户编号
+  string Nickname = 3; // 用户昵称
+  string Avatar = 4; // 用户头像
+  string AvatarUrl = 5; // 用户头像地址
+  string Birthday = 6; // 用户生日
+  string Email = 7; // 用户邮箱
+  bool IsVerifiedEmail = 8; // 是否验证过邮箱
+  map<int64, int64> SupervisorInfo = 9;// 父级UID
+  int32 Status = 10; // 用户状态
+  int64 RegisterAt = 11; // 注册时间
+  int32 UserType = 12; // 用户类型
+  string DeviceID = 13; //设备ID
+  string RegisterIP = 14; //注册IP
+  bool IsSetPasswd = 15; // 需要设置密码
+  int32 RegisterType = 16; // 注册渠道
+  string  Language = 17; // 语言
+  string ChannelName = 18; //渠道名
+  string ChannelCode = 19; //渠道编码
+  int32 DeviceType = 20; //设备类型(1=android、2=ios、3=web)
+  string Country = 21; //国家
+  string City = 22; //城市
+  string LastLoginIP = 23; //上次登录IP
+  int64 LastLoginAt = 24;//上次登录时间
+}
+
+message ExistsEmailArgs {
+  string Email = 1; // 邮箱
+}
+
+message ExistsEmailReply {
+  bool OK = 1; // 是否存在
+}
+
+message ValidateTokenArgs {
+  string Token = 1; // Token
+}
+
+message ValidateTokenReply {
+  UserInfo User = 1; // 用户
+}
+
+message BindEmailArgs {
+  int64  Uid = 1;
+  string Email = 2; // 用户邮箱
+  string PassWd = 3;//用户密码
+}
+message BindEmailReply{
+}
+
+message TelegramLoginArgs {
+  string UserID = 1; //用户Code
+  string UserName = 2; // 用户名
+  string InviteCode = 3; // 邀请码
+  string Channel = 4; // 渠道
+  string Avatar = 5; //头像地址
+  string Nickname = 6; //昵称
+  string ClientIP = 7;//ip
+  string ChannelCode = 8; //渠道编码
+  DeviceInfo DeviceInfo = 9; //设备信息
+  string PassWord = 10; //密码
+  bool IsRobot = 11; //是否是机器人过来的
+}
+
+message TelegramLoginReply {
+  string Token = 1; // 用户Token
+  int64  Uid = 2; // 用户名
+  string PassWord = 3; //密码
+}
+
+
+
+message FetchInviteUrlArgs {
+  int64 UID = 1; //用户ID
+}
+
+message FetchInviteUrlReply {
+  string InviteUrl = 1; //用户ID
+}
+

@@ -1,0 +1,209 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+package pb;
+
+
+service Wallet {
+  // 初始化钱包
+  rpc InitWallet(InitWalletArgs) returns (InitWalletReply) {}
+  // 设置默认钱包
+  rpc SetDefaultCurrency(SetDefaultCurrencyArgs) returns (SetDefaultCurrencyReply) {}
+  // 增加账户余额（交易账单为成功状态，不可通过CancelTrade来取消）
+  rpc IncrBalance(IncrBalanceArgs) returns (IncrBalanceReply) {}
+  // 扣除账户余额（交易账单为成功状态，不可通过CancelTrade来取消）
+  rpc DecrBalance(DecrBalanceArgs) returns (DecrBalanceReply) {}
+  // 冻结账户余额（交易账单为冻结状态，可通过CancelTrade来取消）
+  rpc FreezeBalance(FreezeBalanceArgs) returns (FreezeBalanceReply) {}
+  // 取消交易（无法取消已成功的交易）
+  rpc CancelTrade(CancelTradeArgs) returns (CancelTradeReply) {}
+  // 完成交易（操作已成功的交易无效）
+  rpc CompleteTrade(CompleteTradeArgs) returns (CompleteTradeReply) {}
+  // 拉取账户余额
+  rpc FetchBalance(FetchBalanceArgs) returns (FetchBalanceReply) {}
+  // 拉取所有余额
+  rpc FetchBalances(FetchBalancesArgs) returns (FetchBalancesReply) {}
+  // 拉取交易记录列表
+  rpc FetchTradeList(FetchTradeListArgs) returns (FetchTradeListReply) {}
+  
+}
+
+message InitWalletArgs {
+  int64 UID = 1; // 用户ID
+  string DefaultCurrency = 2; // 默认货币类型
+  double InitCash = 3; //用户类型
+}
+
+message InitWalletReply {
+
+}
+
+message SetDefaultCurrencyArgs {
+  int64 UID = 1; // 用户ID
+  string Currency = 2; // 货币类型
+}
+
+message SetDefaultCurrencyReply {
+
+}
+
+message IncrBalanceArgs {
+  int64 UID = 1; // 用户ID
+  string Currency = 2; // 货币
+  double Cash = 3; // 现金
+  int32 Type = 4; // 操作类型
+  string RelatedID = 7; // 关联ID
+  double Taxation = 8; // 税收
+  double BetAmount = 9;// 返佣原始数据
+  bool Rebate = 10;// 返佣原始数据
+  string GameName = 11; // 游戏名
+  int32 AmountKind = 12; // 1现金，2奖金
+  int64 PlayCurrencyID = 13; // play币种
+  string PlayCurrency = 14;   // play币种
+  double PlayCash = 15;       // play变动的现金
+  string TransactionID = 16; // 三方交易ID
+	int32 UserControlKind = 17;
+}
+
+message IncrBalanceReply {
+  string TradeNO = 1; // 交易号
+  BalanceInfo Balance = 2; // 账户余额
+  ChangeInfo Change = 3; // 账户变动
+}
+
+message DecrBalanceArgs {
+  int64 UID = 1; // 用户ID
+  string Currency = 2; // 货币
+  double Cash = 3; // 现金
+  int32 Type = 4; // 操作类型
+  string RelatedID = 7; // 关联ID
+  double Taxation = 8; // 税收
+  double BetAmount = 9;// 返佣原始数据
+  bool Rebate = 10;// 是否反佣金
+  string GameName = 11; // 游戏名
+  int32 AmountKind = 12; // 1现金，2奖金
+  int64 PlayCurrencyID = 13; // play币种
+  string PlayCurrency = 14;   // play币种
+  double PlayCash = 15;       // play变动的现金
+  string TransactionID = 16; // 三方交易ID
+  int32 UserControlKind = 17;
+}
+
+message DecrBalanceReply {
+  string TradeNO = 1; // 交易号
+  BalanceInfo Balance = 2; // 账户余额
+  ChangeInfo Change = 3; // 账户变动
+}
+
+message FreezeBalanceArgs {
+  int64 UID = 1; // 用户ID
+  string Currency = 2; // 货币
+  double Cash = 3; // 现金
+  double Amount = 5; // 扣减金额（优先扣减奖金，奖金不够再扣减现金）
+  int32 Type = 6; // 操作类型
+  string RelatedID = 9; // 关联ID
+  bool Rebate = 10;// 是否反佣金
+  int32 AmountKind = 11; // 1现金，2奖金
+}
+
+message FreezeBalanceReply {
+  string TradeNO = 1; // 交易号
+  BalanceInfo Balance = 2; // 账户余额
+  ChangeInfo Change = 3; // 账户变动
+}
+
+message CancelTradeArgs {
+  string TradeNO = 1; // 交易号（建议首选）
+  string RelatedID = 4; // 关联ID
+}
+
+message CancelTradeReply {
+  BalanceInfo Balance = 1; // 账户余额
+  ChangeInfo Change = 2; // 账户变动
+}
+
+message CompleteTradeArgs {
+  string TradeNO = 1; // 交易号（建议首选）
+  string RelatedID = 4; // 关联ID
+}
+
+message CompleteTradeReply {
+
+}
+
+
+message FetchBalanceArgs {
+  int64 UID = 1; // 用户ID
+  string Currency = 2; // 货币
+}
+
+message FetchBalanceReply {
+  map<int32,BalanceInfo> Balance = 1; // 账户余额
+}
+
+message FetchBalancesArgs {
+  int64 UID = 1; // 用户ID
+}
+message FetchBalanceMap {
+  map<int32,BalanceInfo> Balance = 1;
+}
+message FetchBalancesReply {
+  map<string,FetchBalanceMap>  List = 1; // 余额列表
+}
+
+message BalanceInfo {
+  string Currency = 1; // 货币类型
+  double Cash = 2; // 现金
+  double Used = 3; // 已经使用
+  bool IsDefault = 4; // 是否默认货币
+  int32 AmountKind = 5; // 1现金，2奖金
+}
+
+message ChangeInfo {
+  string Currency = 1; // 货币类型
+  double Cash = 3; // 现金
+  int32 AmountKind = 4; // 1现金，2奖金
+}
+
+message FetchTradeListArgs {
+  int32 Page = 1; // 当前页
+  int32 Limit = 2; // 每页大小
+  int64 UID = 3; // 用户ID
+  string Currency = 5; // 贷币ID
+  repeated int32 Types = 6; // 交易类型
+  string StartTime = 7; // 开始时间
+  string EndTime = 8; // 结束时间
+  bool HasMore = 9; //是否通过HashMore查询
+}
+
+message FetchTradeListReply {
+  int32 Total = 1; // 游戏总数
+  int32 Page = 2; // 当前页
+  int32 Limit = 3; // 每页大小
+  bool HasMore = 4;
+  repeated TradeInfo List = 5; // 游戏列表
+}
+
+message TradeInfo {
+  int64 ID = 1; // 交易ID
+  string NO = 2; // 交易流水号
+  int64 UID = 3; // 用户ID
+  string Currency = 4; // 货币类型
+  double BeforeCash = 6; // 交易前的现金
+  double AfterCash = 7; // 交易后的现金
+  double ChangeCash = 9; // 变动的现金
+  int32 Type = 11; // 交易类型
+  int32 Status = 12; // 交易状态（1：交易成功 2：交易失败 3：正在交易）
+  int64 CreatedAt = 13; // 交易创建时间
+  int64 UpdatedAt = 14; // 交易更新时间
+  double BetCash = 15; // 下游金额
+  string UserCode = 16; // 用户Code
+  string NickName = 17; // 用户名
+  string ChannelCode = 19; //渠道
+  string Channel = 20; //渠道
+  int32 AmountKind = 21; // 1真金 2奖金
+}
+
+
+

@@ -1,0 +1,68 @@
+package internal
+
+import (
+	"context"
+	optionChannelDao "tron_robot/internal/dao/option-channel"
+	"tron_robot/internal/event/message"
+	"tron_robot/internal/model"
+	tgmsg "tron_robot/internal/xtelegram/tg-msg"
+	tgtypes "tron_robot/internal/xtelegram/tg-types"
+	waitforinput "tron_robot/internal/xtelegram/wait-for-input"
+	"xbase/log"
+)
+
+// "🆘能量预支"
+func EnergyAdvances(userBase *model.UserBase, payload *message.MessageBusiness) {
+	if payload.Type != message.MessageType_Private {
+		return
+	}
+	ctx := context.Background()
+	channelCfg, err := optionChannelDao.Instance().GetChannel(ctx, payload.ChannelCode)
+	if err != nil {
+		log.Errorf("%v", err)
+		return
+	}
+	if channelCfg == nil {
+		log.Errorf("channelCfg is nil")
+		return
+	}
+	if payload.Type != message.MessageType_Private {
+		return
+	}
+	xMsg, err := tgmsg.NewXTelegramMessage(channelCfg.TelegramCfg.MainRobotToken,
+		tgmsg.WithText("功能开发中..."),
+		tgmsg.WithDebug(true),
+		tgmsg.WithMsgType(tgtypes.RobotMsgTypeText),
+		tgmsg.WithParseMode(tgtypes.ModeNone))
+
+	/*
+		cmdMsg := optiontelegramcmd.GetChanCodeCmd(payload.ChannelCode, tgtypes.XTelegramCmd_Start)
+		if cmdMsg == nil {
+			return
+		}
+		xMsg, err := tgmsg.NewXTelegramMessage(channelCfg.TelegramCfg.MainRobotToken, cmdMsg.Text,
+			tgmsg.WithDebug(true),
+			tgmsg.WithCmd(cmdMsg.Cmd),
+			tgmsg.WithMsgType(cmdMsg.Type),
+			tgmsg.WithParseMode(cmdMsg.ParseMode),
+			tgmsg.WithKeyboard(cmdMsg.Keyboard))
+	*/
+	if err != nil {
+		return
+	}
+	if xMsg == nil {
+		return
+	}
+	if _, err := xMsg.SendMessage(payload.ChatID, nil); err != nil {
+		log.Warnf("sendMessage:%v", err)
+	} else {
+		waitforinput.SetWaitForinputKey(&waitforinput.WaitforinputInfo{
+			UserID:        payload.UserID, //用户TG
+			InPutMsg:      payload.WaitforinputMsg.InPutMsg,
+			Button:        payload.Button,
+			UserBottonKey: payload.Button.WaitForInputKey(),
+			Extended:      nil,
+		})
+	}
+
+}

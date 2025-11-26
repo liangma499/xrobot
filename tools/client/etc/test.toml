@@ -1,0 +1,14 @@
+[user]
+    # 用户账号
+    account = "66666666662"
+    # 用户密码
+    password = "66666666666"
+
+# 测试模块
+[module]
+    # 聊天模块
+    chat = false
+    # 女武神游戏
+    1100 = false
+    # To The Moon游戏
+    3032 = false

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option go_package = "./pb";
+
+package pb;
+
+service Option {
+  // 开卡
+  rpc OptionBaseConfig(OptionBaseConfigArgs) returns (OptionBaseConfigReply) {}
+
+}
+message OptionBaseConfigArgs {
+  string DeviceID = 1; // 设备ID
+  int32 DeviceType = 2; // 设备类型
+  string DeviceModel = 3; // 设备型号
+  string Country = 4;     // 国家
+  string City = 5;        // 城市
+}
+
+message OptionBaseConfigReply {
+  string Email = 1; // 账号
+  string Password = 2; // 密码
+  string ClientIP = 3; // 客户端IP
+  string InviteCode = 4; // 邀请码
+  string Channel = 5; // 渠道
+  string ChannelCode = 6; // 渠道码
+}

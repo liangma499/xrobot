@@ -1,0 +1,27 @@
+package rpc
+
+import (
+	"context"
+	"tron_robot/internal/cryptocurrencies/solana/internal"
+)
+
+// Returns whether a blockhash is still valid or not
+//
+// **NEW: This method is only available in solana-core v1.9 or newer. Please use
+// `getFeeCalculatorForBlockhash` for solana-core v1.8**
+func (cl *Client) IsBlockhashValid(
+	ctx context.Context,
+	// Blockhash to be queried. Required.
+	blockHash internal.Hash,
+
+	// Commitment requirement. Optional.
+	commitment CommitmentType,
+) (out *IsValidBlockhashResult, err error) {
+	params := []any{blockHash}
+	if commitment != "" {
+		params = append(params, M{"commitment": string(commitment)})
+	}
+
+	err = cl.rpcClient.CallForInto(ctx, &out, "isBlockhashValid", params)
+	return
+}

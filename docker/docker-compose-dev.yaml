@@ -1,0 +1,99 @@
+version: "3"
+
+services:
+  mysql:
+    image: mysql:8.0.3
+    container_name: cr-mysql-test
+    platform: linux/x86_64
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    command: --innodb_file_per_table=1 --skip-log-bin --general_log=0 --lower_case_table_names=1 --log_bin_trust_function_creators=ON --character_set_server=utf8mb4 --event_scheduler=ON --innodb_buffer_pool_size=4G --default_authentication_plugin=mysql_native_password --max_connections=4096 --group_concat_max_len=1844674407370954752 --sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./cr-mysql-test:/var/lib/mysql
+    networks:
+      - middleware
+  redis:
+    image: redis:7.0.11
+    container_name: cr-redis-test
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - '6379:6379'
+    #command: redis-server --requirepass robotEm24321PwdRed
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./cr-redis-test:/data
+    networks:
+      - middleware
+  etcd:
+    image: bitnami/etcd:latest
+    container_name: cr-etcd-test
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    platform: linux/x86_64
+    restart: always
+    volumes:
+      - ./cr-etcd-test:/data
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+      - auto-compaction-mode=periodic
+      - auto-compaction-retention=1h # 保留1小时的历史数据
+    ports:
+      - '2379:2379'
+      - '2380:2380'
+    networks:
+      - middleware
+  consul:
+    image: bitnami/consul:latest
+    container_name: cr-consul-test
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./cr-consul-test:/data
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - '8300:8300'
+      - '8301:8301'
+      - '8301:8301/udp'
+      - '8500:8500'
+      - '8600:8600'
+      - '8600:8600/udp'
+  nats:
+    image: nats:latest
+    container_name: cr-nats-test
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    platform: linux/x86_64
+    volumes:
+      - ./cr-nats-test:/data
+    restart: always
+    ports:
+      - '4222:4222'
+      - '6222:6222'
+      - '8222:8222'
+networks:
+  middleware:
+    driver: bridge

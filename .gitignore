@@ -1,0 +1,14 @@
+.idea/
+log/
+run/
+*/log/
+*/run/
+xrobot_bin/
+__debug_bin*
+/backend/admin/resource
+web/resource/upload/
+resource/upload/*.*
+*.exe
+internal/component/avatar/*.jpg
+docker/*/
+*.log

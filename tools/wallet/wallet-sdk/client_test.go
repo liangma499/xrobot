@@ -1,0 +1,16 @@
+package walletsdk_test
+
+import (
+	"testing"
+	walletsdk "tron_robot/tools/wallet/wallet-sdk"
+)
+
+func TestClient_GetBalance(t *testing.T) {
+	u, err := walletsdk.NewClient().GetSlot()
+
+	t.Logf("u:%v err:%v", u, err)
+
+	data, err := walletsdk.NewClient().GetBlock(u)
+
+	t.Logf("data:%v err:%v", data, err)
+}

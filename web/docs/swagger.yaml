@@ -1,0 +1,1504 @@
+definitions:
+  basic.uploadResData:
+    properties:
+      name:
+        description: 文件名
+        type: string
+      path:
+        description: 文件路径
+        type: string
+      url:
+        description: 文件链接
+        type: string
+    type: object
+  card.balanceDepositTransaction:
+    properties:
+      amount:
+        description: 交易金额
+        type: string
+      createTime:
+        description: 创建时间
+        type: string
+      id:
+        description: "交易唯一id\t“48763843”"
+        type: string
+      type:
+        description: '"Deposit","Whale card fee","Whale card"'
+        type: string
+    type: object
+  card.cardInfo:
+    properties:
+      addressLine:
+        description: "地址【可选】\t如果在美国使用，建议传递这类信息，大部分美国商户需要地址信息"
+        type: string
+      balance:
+        description: 余额
+        type: string
+      cardId:
+        description: 用户预算卡id “48763843”
+        type: string
+      cardNo:
+        description: 卡号
+        type: string
+      cardStatus:
+        description: Active,Frozen,inactive
+        type: string
+      cardType:
+        description: "\"VISA\",\"MASTER\",\"VISA_PREMIUM\"\t默认 VISA"
+        type: string
+      city:
+        description: 【可选】
+        type: string
+      country:
+        description: 【可选】
+        type: string
+      cvv:
+        description: cvv
+        type: string
+      expireMonth:
+        type: string
+      expireYear:
+        type: string
+      name:
+        description: 用户名
+        type: string
+      postalCode:
+        description: 【可选】
+        type: string
+    type: object
+  card.cardTransaction:
+    properties:
+      amount:
+        description: Magnitude of the amount.
+        type: string
+      cardId:
+        type: string
+      createTime:
+        description: "date-time\tTransaction creation time.ISO-8601 UTC date/time
+          format"
+        type: string
+      currency:
+        description: "Currency code.\tUSD"
+        type: string
+      detail:
+        description: "Transaction detail.\t\"WALMART.COM 8009666546 BENTONVILLE AR
+          US\""
+        type: string
+      fee:
+        description: Transaction fee
+        type: string
+      id:
+        description: "交易唯一id\t“48763843”"
+        type: string
+      remark:
+        description: "Transaction failure Remarks.\t\"No sufficient funds\""
+        type: string
+      status:
+        description: "Transaction status.\tPending Closed Fail"
+        type: string
+      transactionTime:
+        description: "date-time\tOrder trading time.ISO-8601 UTC date/time format."
+        type: string
+      type:
+        description: "Transaction type\tConsumption TransferIn TransferOut Credit
+          Reversal Frozen UnFrozen"
+        type: string
+    type: object
+  card.checkUserCardResp:
+    properties:
+      additionalAmountRequired:
+        description: 开卡还需要的金额
+        type: string
+    type: object
+  card.currencyChannelInfo:
+    properties:
+      address:
+        description: 充值地址
+        type: string
+      card_open_fee:
+        description: 开卡费用
+        type: string
+      channel:
+        description: 网络渠道
+        type: string
+      collect_fee:
+        description: 归集费用
+        type: string
+      confirmation:
+        type: string
+      gasFee:
+        description: Gas费
+        type: string
+      minutes:
+        type: string
+      pay_currency:
+        type: string
+      second:
+        type: string
+      top_up_fee:
+        description: 手续费
+        type: string
+    type: object
+  card.currencyInfo:
+    properties:
+      channelList:
+        items:
+          $ref: '#/definitions/card.currencyChannelInfo'
+        type: array
+      currency:
+        type: string
+    type: object
+  card.failetchUserCardPasswordStatusResp:
+    properties:
+      isSet:
+        description: true:已经设置密码 false:未设置
+        type: boolean
+    type: object
+  card.fetchBalanceDepositTransactionListReq:
+    properties:
+      cardId:
+        description: 用户预算卡id “48763843”
+        maxLength: 32
+        minLength: 6
+        type: string
+      limit:
+        description: 每页大小
+        maximum: 100
+        minimum: 1
+        type: integer
+      page:
+        description: 当前页码
+        minimum: 1
+        type: integer
+    required:
+    - cardId
+    - limit
+    - page
+    type: object
+  card.fetchBalanceDepositTransactionListResp:
+    properties:
+      cardId:
+        type: string
+      list:
+        items:
+          $ref: '#/definitions/card.balanceDepositTransaction'
+        type: array
+      pages:
+        description: 获取第一页
+        type: string
+      total:
+        description: 总数
+        type: string
+    type: object
+  card.fetchCardCfgListResp:
+    properties:
+      area:
+        description: 地区
+        type: string
+      card_currency:
+        description: 卡支持的币种
+        type: string
+      card_open_fee:
+        description: 开卡费用 只认USTD
+        type: string
+      card_type:
+        description: VISA=订阅卡;VISA_PREMIUM=支付卡
+        type: string
+      first_card_open_fee:
+        description: 第一次开卡优惠
+        type: string
+      is_first_card:
+        description: 是否是第一次开卡
+        type: boolean
+      month_fee:
+        description: 月费
+        type: string
+      name:
+        description: 卡名
+        type: string
+      pay_currency:
+        description: 支付币种
+        type: string
+      premium:
+        description: 手续费
+        type: string
+      top_up_fee:
+        description: Gas费用
+        type: string
+    type: object
+  card.fetchCurrencyListResp:
+    properties:
+      currency:
+        type: string
+      url:
+        type: string
+    type: object
+  card.fetchTransactionListReq:
+    properties:
+      cardId:
+        description: 用户预算卡id “48763843”
+        maxLength: 32
+        minLength: 6
+        type: string
+      limit:
+        description: 每页大小
+        maximum: 100
+        minimum: 1
+        type: integer
+      page:
+        description: 当前页码
+        minimum: 1
+        type: integer
+    required:
+    - cardId
+    - limit
+    - page
+    type: object
+  card.fetchTransactionListResp:
+    properties:
+      cardId:
+        type: string
+      list:
+        items:
+          $ref: '#/definitions/card.cardTransaction'
+        type: array
+      pages:
+        description: 获取第一页
+        type: string
+      total:
+        description: 总数
+        type: string
+    type: object
+  card.fetchUserCardCvvReq:
+    properties:
+      cardId:
+        description: 用户预算卡id “48763843”
+        maxLength: 32
+        minLength: 6
+        type: string
+      password:
+        description: 密码
+        maxLength: 16
+        minLength: 6
+        type: string
+    required:
+    - cardId
+    - password
+    type: object
+  card.fetchUserCardCvvResp:
+    properties:
+      cardInfo:
+        allOf:
+        - $ref: '#/definitions/card.cardInfo'
+        description: cvv
+    type: object
+  card.fetchUserCardListInfoResp:
+    properties:
+      list:
+        items:
+          $ref: '#/definitions/card.cardInfo'
+        type: array
+    type: object
+  card.fetchUserCardRechargeInfoReq:
+    properties:
+      cardId:
+        description: 用户预算卡id “48763843”
+        maxLength: 32
+        minLength: 6
+        type: string
+    required:
+    - cardId
+    type: object
+  card.fetchUserCardRechargeInfoResp:
+    properties:
+      currencyList:
+        items:
+          $ref: '#/definitions/card.currencyInfo'
+        type: array
+    type: object
+  card.fetchUserInviteInfoResp:
+    properties:
+      points:
+        description: 积分
+        type: string
+      pointsChildRatio:
+        description: 别人充值积分比例
+        type: string
+      pointsMineRatio:
+        description: 自己充值积分比例
+        type: string
+      userInviteInfo:
+        $ref: '#/definitions/card.userInviteInfo'
+    type: object
+  card.fetchWithdrawCfgListReq:
+    properties:
+      cardId:
+        type: string
+      withdrawType:
+        enum:
+        - commission
+        - card
+        type: string
+    type: object
+  card.fetchWithdrawCfgListResp:
+    properties:
+      amount:
+        description: 余额
+        type: string
+      currencyList:
+        additionalProperties:
+          additionalProperties:
+            $ref: '#/definitions/card.whithdrawCurrencyChannelInfo'
+          type: object
+        description: CurrencyList []*whithdrawCurrencyInfo `json:"currencyList"`
+        type: object
+    type: object
+  card.preCreateReq:
+    properties:
+      addressLine:
+        description: 地址【可选】如果在美国使用，建议传递这类信息，大部分美国商户需要地址信息
+        maxLength: 256
+        type: string
+      bin:
+        description: 【可选】
+        maxLength: 128
+        type: string
+      cardType:
+        description: "\"VISA\",\"MASTER\",\"VISA_PREMIUM\"\t默认 VISA"
+        enum:
+        - VISA
+        - MASTER
+        - VISA_PREMIUM
+        type: string
+      city:
+        description: 【可选】
+        maxLength: 128
+        type: string
+      country:
+        description: 【可选】
+        maxLength: 128
+        type: string
+      email:
+        description: 【可选】
+        maxLength: 128
+        type: string
+      firstName:
+        description: 姓
+        maxLength: 128
+        minLength: 1
+        type: string
+      lastName:
+        description: 名
+        maxLength: 128
+        minLength: 1
+        type: string
+      password:
+        description: 【可选】
+        maxLength: 128
+        type: string
+      phone:
+        description: "需填写真实手机号，有些使用场景需要手机接收验证码\t“334345637”"
+        maxLength: 16
+        minLength: 5
+        type: string
+      phoneCode:
+        description: "手机区域码\t“+85”"
+        maxLength: 16
+        minLength: 1
+        type: string
+      postalCode:
+        description: 【可选】
+        maxLength: 16
+        type: string
+    required:
+    - firstName
+    - lastName
+    - phone
+    - phoneCode
+    type: object
+  card.setUserCardPasswordReq:
+    properties:
+      password:
+        description: 密码
+        maxLength: 16
+        minLength: 6
+        type: string
+    required:
+    - password
+    type: object
+  card.userInviteInfo:
+    properties:
+      cardUser:
+        description: 开卡用户数
+        type: integer
+      commission:
+        description: 佣金
+        type: string
+      commissionChildCard:
+        description: 子级建卡得的佣金
+        type: string
+      commissionRatio:
+        description: 子级充值佣金比例
+        type: string
+      inviteUser:
+        description: 邀请用户数
+        type: integer
+    type: object
+  card.userWithdrawResp:
+    properties:
+      address:
+        maxLength: 64
+        minLength: 16
+        type: string
+      amount:
+        maxLength: 32
+        minLength: 1
+        type: string
+      cardId:
+        type: string
+      currency:
+        enum:
+        - USDT
+        type: string
+      network:
+        maxLength: 64
+        minLength: 1
+        type: string
+      withdrawType:
+        enum:
+        - commission
+        - card
+        type: string
+    required:
+    - address
+    - amount
+    - currency
+    - network
+    type: object
+  card.whithdrawCurrencyChannelInfo:
+    properties:
+      channel:
+        type: string
+      currency:
+        type: string
+      gas_fee:
+        type: string
+      max:
+        type: string
+      min:
+        type: string
+      premium:
+        type: string
+      remainderMin:
+        type: string
+    type: object
+  define.Res:
+    properties:
+      code:
+        type: integer
+      data: {}
+    type: object
+  passport.loginReq:
+    properties:
+      city:
+        description: 城市
+        maxLength: 128
+        type: string
+      country:
+        description: 国家
+        maxLength: 128
+        type: string
+      deviceID:
+        description: 设备ID
+        maxLength: 128
+        type: string
+      deviceModel:
+        description: 设备型号
+        maxLength: 100
+        type: string
+      deviceType:
+        description: 设备类型 设备类型(0 无 1=android、2=ios、3=web)
+        enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        type: integer
+      email:
+        description: 账号
+        type: string
+      password:
+        description: 密码
+        maxLength: 20
+        minLength: 6
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  passport.loginResData:
+    properties:
+      token:
+        description: Token
+        type: string
+    type: object
+  passport.registerReq:
+    properties:
+      channel:
+        description: 渠道
+        type: string
+      city:
+        description: 城市
+        maxLength: 128
+        type: string
+      country:
+        description: 国家
+        maxLength: 128
+        type: string
+      deviceID:
+        description: 设备ID
+        maxLength: 128
+        type: string
+      deviceModel:
+        description: 设备型号
+        maxLength: 100
+        type: string
+      deviceType:
+        description: 设备类型 设备类型(0 无 1=android、2=ios、3=web)
+        enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        type: integer
+      email:
+        description: 账号
+        type: string
+      inviteCode:
+        description: 邀请码
+        type: string
+      password:
+        description: 密码
+        maxLength: 20
+        minLength: 6
+        type: string
+    required:
+    - email
+    - password
+    type: object
+  passport.resetPasswordReq:
+    properties:
+      code:
+        description: 验证码
+        type: string
+      email:
+        description: 邮箱
+        type: string
+      password:
+        description: 密码
+        maxLength: 20
+        minLength: 6
+        type: string
+    required:
+    - password
+    type: object
+  passport.sendEmailCodeReq:
+    properties:
+      email:
+        description: 邮箱
+        type: string
+      language:
+        description: 语言 th:泰语 en:英语 pt:葡萄亚语 支持 如果没有支持的就发英语
+        type: string
+    type: object
+  passport.telegramLoginReq:
+    properties:
+      avatar:
+        description: 头像
+        type: string
+      channel:
+        type: string
+      city:
+        description: 城市
+        maxLength: 128
+        type: string
+      country:
+        description: 国家
+        maxLength: 128
+        type: string
+      deviceID:
+        description: 设备ID
+        maxLength: 128
+        type: string
+      deviceModel:
+        description: 设备型号
+        maxLength: 100
+        type: string
+      deviceType:
+        description: 设备类型 设备类型(0 无 1=android、2=ios、3=web)
+        enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        type: integer
+      inviteCode:
+        description: 邀请码
+        type: string
+      nickname:
+        description: 昵称
+        type: string
+      password:
+        type: string
+      userID:
+        description: 用户ID
+        maxLength: 32
+        minLength: 1
+        type: string
+      userName:
+        description: 用户名
+        type: string
+    required:
+    - userID
+    type: object
+  passport.telegramLoginResData:
+    properties:
+      token:
+        description: 授权Token
+        type: string
+    type: object
+  user.bindEmailReq:
+    properties:
+      code:
+        description: 验证码
+        type: string
+      email:
+        description: 邮箱
+        type: string
+      password:
+        description: 密码
+        type: string
+    type: object
+  user.fetchInviteUrlResp:
+    properties:
+      inviteUrl:
+        description: 推广链接
+        type: string
+    type: object
+  user.fetchProfileResData:
+    properties:
+      avatarUrl:
+        description: 头像地址
+        type: string
+      birthday:
+        description: 生日
+        type: string
+      code:
+        description: User ID
+        type: string
+      email:
+        description: 邮箱
+        type: string
+      isAnonymized:
+        description: 是否匿名化
+        type: boolean
+      isCompletedFirstRecharge:
+        description: 是否完成首充
+        type: boolean
+      isSetPasswd:
+        description: 是否需要设置密码
+        type: boolean
+      isVerifiedEmail:
+        description: 是否验证了邮箱
+        type: boolean
+      nickname:
+        description: 昵称
+        type: string
+      thirdPlatform:
+        description: 三方登录  0:无 1:邮箱 2:推特 4:钱包 8:谷歌 用这个值  0表示游客 &1 > 0表示这个账号是邮箱账号 类推
+          &2，&4，&8 大于0 表示 推特 钱包 谷歌
+        type: integer
+    type: object
+  user.fetchUserProfileReq:
+    properties:
+      code:
+        description: User ID
+        maxLength: 8
+        minLength: 7
+        type: string
+    required:
+    - code
+    type: object
+  user.fetchUserProfileResData:
+    properties:
+      avatarUrl:
+        description: 头像地址
+        type: string
+      birthday:
+        description: 生日
+        type: string
+      code:
+        description: User ID
+        type: string
+      nickname:
+        description: 昵称
+        type: string
+    type: object
+  user.modifyAvatarReq:
+    properties:
+      avatar:
+        description: 用户头像
+        maxLength: 200
+        type: string
+    required:
+    - avatar
+    type: object
+  user.modifyBirthdayReq:
+    properties:
+      birthday:
+        description: 生日
+        type: string
+    type: object
+  user.modifyLanguageReq:
+    properties:
+      language:
+        description: 邮箱
+        type: string
+    type: object
+  user.modifyNicknameReq:
+    properties:
+      nickname:
+        description: 用户昵称
+        maxLength: 50
+        minLength: 4
+        type: string
+    required:
+    - nickname
+    type: object
+  user.modifyPasswordReq:
+    properties:
+      newPassword:
+        description: 新密码
+        maxLength: 16
+        minLength: 6
+        type: string
+      oldPassword:
+        description: 旧密码
+        maxLength: 16
+        minLength: 6
+        type: string
+    required:
+    - newPassword
+    - oldPassword
+    type: object
+  user.setPasswordReq:
+    properties:
+      code:
+        description: 验证码
+        type: string
+      email:
+        description: 邮箱
+        type: string
+      password:
+        description: 密码
+        maxLength: 20
+        minLength: 6
+        type: string
+    required:
+    - password
+    type: object
+  user.verifyEmailReq:
+    properties:
+      code:
+        description: 验证码
+        type: string
+      email:
+        description: 邮箱
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /basic/upload:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/basic.uploadResData'
+              type: object
+      summary: 上传文件
+      tags:
+      - 基础模块
+  /card/check-user-card:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.checkUserCardResp'
+              type: object
+      summary: 检查充值
+      tags:
+      - 卡片模块
+  /card/fetch-balance-deposit-transaction-list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.fetchBalanceDepositTransactionListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.fetchBalanceDepositTransactionListResp'
+              type: object
+      summary: 充值记录
+      tags:
+      - 卡片模块
+  /card/fetch-card-cfg-list:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  items:
+                    $ref: '#/definitions/card.fetchCardCfgListResp'
+                  type: array
+              type: object
+      summary: 拉取卡片基础配置
+      tags:
+      - 卡片模块
+  /card/fetch-card-list:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.fetchUserCardListInfoResp'
+              type: object
+      summary: 卡片列表
+      tags:
+      - 卡片模块
+  /card/fetch-currency-list:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  items:
+                    $ref: '#/definitions/card.fetchCurrencyListResp'
+                  type: array
+              type: object
+      summary: 拉取币种配置
+      tags:
+      - 卡片模块
+  /card/fetch-transaction-list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.fetchTransactionListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.fetchTransactionListResp'
+              type: object
+      summary: 消费记录
+      tags:
+      - 卡片模块
+  /card/fetch-user-card-cvv:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.fetchUserCardCvvReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.fetchUserCardCvvResp'
+              type: object
+      summary: 查看用户CVV
+      tags:
+      - 卡片模块
+  /card/fetch-user-card-password-status:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.failetchUserCardPasswordStatusResp'
+              type: object
+      summary: 拉取用户支付密码信息
+      tags:
+      - 卡片模块
+  /card/fetch-user-card-recharge-info:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.fetchUserCardRechargeInfoReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.fetchUserCardRechargeInfoResp'
+              type: object
+      summary: 用户充值信息
+      tags:
+      - 卡片模块
+  /card/fetch-user-invite-info:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/card.fetchUserInviteInfoResp'
+              type: object
+      summary: 用户推广信息
+      tags:
+      - 卡片模块
+  /card/fetch-withdraw-cfg-list:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.fetchWithdrawCfgListReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  items:
+                    $ref: '#/definitions/card.fetchWithdrawCfgListResp'
+                  type: array
+              type: object
+      summary: 拉取提现配置
+      tags:
+      - 卡片模块
+  /card/pre-create:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.preCreateReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  items:
+                    $ref: '#/definitions/card.fetchCardCfgListResp'
+                  type: array
+              type: object
+      summary: 开卡
+      tags:
+      - 卡片模块
+  /card/set-user-card-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.setUserCardPasswordReq'
+      produces:
+      - application/json
+      responses: {}
+      summary: 设置支付密码
+      tags:
+      - 卡片模块
+  /card/user-withdraw:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/card.userWithdrawResp'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 用户提现
+      tags:
+      - 卡片模块
+  /passport/login:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/passport.loginReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                data:
+                  $ref: '#/definitions/passport.loginResData'
+              type: object
+      summary: 登录
+      tags:
+      - 注册登录
+  /passport/register:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/passport.registerReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 注册
+      tags:
+      - 注册登录
+  /passport/reset-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/passport.resetPasswordReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 重置密码
+      tags:
+      - 注册登录
+  /passport/send-email-code:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/passport.sendEmailCodeReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 发送验证码
+      tags:
+      - 注册登录
+  /passport/telegram-login:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/passport.telegramLoginReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/passport.telegramLoginResData'
+              type: object
+      summary: Telegram登录
+      tags:
+      - 注册登录
+  /user/bind-email:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.bindEmailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 绑定邮箱
+      tags:
+      - 用户模块
+  /user/fetch-invite-url:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/user.fetchInviteUrlResp'
+              type: object
+      summary: 拉取推广链接
+      tags:
+      - 用户模块
+  /user/fetch-profile:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/user.fetchProfileResData'
+              type: object
+      summary: 拉取个人信息
+      tags:
+      - 用户模块
+  /user/fetch-user-profile:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.fetchUserProfileReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            allOf:
+            - $ref: '#/definitions/define.Res'
+            - properties:
+                Data:
+                  $ref: '#/definitions/user.fetchUserProfileResData'
+              type: object
+      summary: 拉取用户个人信息（第三视角）
+      tags:
+      - 用户模块
+  /user/modify-avatar:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.modifyAvatarReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 修改头像
+      tags:
+      - 用户模块
+  /user/modify-birthday:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.modifyBirthdayReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 修改生日
+      tags:
+      - 用户模块
+  /user/modify-language:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.modifyLanguageReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 修改昵称
+      tags:
+      - 用户模块
+  /user/modify-nickname:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.modifyNicknameReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 修改昵称
+      tags:
+      - 用户模块
+  /user/modify-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.modifyPasswordReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 修改密码
+      tags:
+      - 用户模块
+  /user/set-password:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.setPasswordReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 设置密码
+      tags:
+      - 用户模块
+  /user/verify-email:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 请求参数
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/user.verifyEmailReq'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 响应参数
+          schema:
+            $ref: '#/definitions/define.Res'
+      summary: 验证邮箱
+      tags:
+      - 用户模块
+swagger: "2.0"

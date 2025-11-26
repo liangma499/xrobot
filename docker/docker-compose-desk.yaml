@@ -1,0 +1,47 @@
+version: '3'
+ 
+services:
+  hbbs:
+    container_name: rustdesk-hbbs-dev
+    ports:
+      - 21115:21115
+      - 21116:21116
+      - 21116:21116/udp
+      - 21118:21118
+    image: rustdesk/rustdesk-server:latest
+    command: hbbs -r 0.0.0.0:21117
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    volumes:
+      - ./rustdesk-hbbs:/root
+    networks:
+      - middleware
+    depends_on:
+      - hbbr
+    restart: always
+ 
+  hbbr:
+    container_name: restdest-hbbr-dev
+    ports:
+      - 21117:21117
+      - 21119:21119
+    image: rustdesk/rustdesk-server:latest
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    command: hbbr
+    volumes:
+      - ./restdest-hbbr:/root
+    networks:
+      - middleware
+    restart: always
+networks:
+  middleware:
+    driver: bridge   
+
+                         

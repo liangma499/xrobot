@@ -1,0 +1,43 @@
+[verificationCode]
+    # 葡萄牙语版本
+  [verificationCode.pt]
+    # 邮件来源
+      from = "Equipe Cyberpunk R<cyberpunkrofficial@gmail.com>"
+      # 邮件主题
+      subject = "Verificação de Email Cyberpunk R"
+      # 内容类型，可选："text/html" | "text/plain"
+      contentType = "text/html"
+      # 邮件内容，必需保留${code}位置
+      body = '<div><style>div {font-family: BinancePlex, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif, serif, EmojiFont}p {padding: 0;margin: 0;font-size: 14px;font-weight: 400}</style><div style="width:600px;max-width:100%;background:#f9f9f9;border-radius:10px;margin:0 auto"><img data-imagetype="External" src="https://tgsvweb.cyberpunkr.io/resource/upload/email/email.png" width="100%"><div style="padding:0 20px 40px"><h2 style="color:#1e2026">Confirme Sua Verificação de Email</h2><p>Bem-vindo à Cyberpunk R!</p><p>Aqui está o seu código de verificação de conta: </p><h3 style="font-weight:700;font-size:24px;line-height:36px;color:#ffc107">${code}</h3><div style="color:#000">    <p>Dicas de Segurança:&nbsp;    </p>    <ul>        <li>            <p>Nunca forneça sua senha a ninguém.</p>        </li>        <li>            <p>Nunca ligue para nenhum número de telefone de alguém que afirme ser do Suporte Cyberpunk R.</p>        </li>        <li>            <p>Nunca envie dinheiro para alguém que afirme ser membro da equipe Cyberpunk R.</p>        </li>        <li>            <p>Adicione aos favoritos o site oficial  <a href="https://cyberpunkr.io/">https://cyberpunkr.io/  </a>e verifique o domínio antes de visitar.</p>        </li>    </ul>    <p>Se você não reconhecer essa atividade, por favor, contate nosso suporte ao cliente imediatamente: support@cyberpunkr.io </p>    <p style="line-height:22px;color:#76808f;margin-top:36px">Equipe Cyberpunk R<br>Esta é uma mensagem automática, por favor, não responda.</p></div><p style="padding:20px;font-size:14px;text-align:center">Direitos autorais© 2024 CYBERPUNK R Todos os direitos reservados.</p></div></div></div>'
+
+    # 英语版本
+  [verificationCode.en]
+    # 邮件来源
+      from = "Cyberpunk R Team<cyberpunkrofficial@gmail.com>"
+      # 邮件主题
+      subject = "Confirm Your Email Verification"
+      # 内容类型，可选："text/html" | "text/plain"
+      contentType = "text/html"
+      # 邮件内容，必需保留${code}位置
+      body = '<div><style>div {  font-family: BinancePlex, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif, serif, EmojiFont}p {  padding: 0;  margin: 0;  font-size: 14px;  font-weight: 400}</style><div style="width:600px;max-width:100%;background:#f9f9f9;border-radius:10px;margin:0 auto"><img data-imagetype="External" src="https://tgsvweb.cyberpunkr.io/resource/upload/email/email.png" width="100%"><div style="padding:0 20px 40px">  <h2 style="color:#1e2026">Cyberpunk R Email Verification</h2>  <p>Welcome to Cyberpunk R!</p>  <p>Here is your account Verification code: </p>  <h3 style="font-weight:700;font-size:24px;line-height:36px;color:#ffc107">${code}</h3>  <div style="color:#000">  <p>Security Tips:&nbsp;  </p>  <ul>      <li>          <p>Never give your password to anyone.</p>      </li>      <li>          <p>Never call any phone number for someone claiming to be Cyberpunk R Support.</p>      </li>      <li>          <p>Never send any money to anyone claiming to be a member of Cyberpunk R team.</p>      </li>      <li>          <p>Bookmark official web  <a href="https://cyberpunkr.io/">https://cyberpunkr.io/  </a> and double check the domain before you visit.</p>      </li>  </ul>  <p>If you don’t recognize this activity, please contact our customer support immediately: support@cyberpunkr.io</p>  <p style="line-height:22px;color:#76808f;margin-top:36px">Cyberpunk R Team <br>This is an automated message, please do not repl.</p>  </div>  <p style="padding:20px;font-size:14px;text-align:center">Copyright© 2024 CYBERPUNK R All rights reserved.</p></div></div></div>'
+
+    # 泰语版本
+  [verificationCode.th]
+    # 邮件来源
+      from = "ทีม Cyberpunk R<cyberpunkrofficial@gmail.com>"
+      # 邮件主题
+      subject = "Cyberpunk R ยืนยันอีเมล"
+      # 内容类型，可选："text/html" | "text/plain"
+      contentType = "text/html"
+      # 邮件内容，必需保留${code}位置
+      body = '<div><style>div {  font-family: BinancePlex, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif, serif, EmojiFont}p {  padding: 0;  margin: 0;  font-size: 14px;  font-weight: 400}</style><div style="width:600px;max-width:100%;background:#f9f9f9;border-radius:10px;margin:0 auto"><img data-imagetype="External" src="https://tgsvweb.cyberpunkr.io/resource/upload/email/email.png" width="100%"><div style="padding:0 20px 40px">  <h2 style="color:#1e2026">ยืนยันการตรวจสอบอีเมลของคุณ</h2>  <p>ยินดีต้อนรับสู่ Cyberpunk R!</p>  <p>นี่คือรหัสยืนยันบัญชีของคุณ: </p>  <h3 style="font-weight:700;font-size:24px;line-height:36px;color:#ffc107">${code}</h3>  <div style="color:#000">  <p>เคล็ดลับด้านความปลอดภัย:&nbsp;  </p>  <ul>      <li>          <p>อย่าให้รหัสผ่านของคุณแก่ใคร.</p>      </li>      <li>          <p>อย่าโทรหาหมายเลขใด ๆ สำหรับคนที่อ้างว่าเป็นทีมสนับสนุน Cyberpunk R.</p>      </li>      <li>          <p>อย่าส่งเงินให้แก่ใครก็ตามที่อ้างว่าเป็นสมาชิกของทีม Cyberpunk R.</p>      </li>      <li>          <p>เพิ่มลิงก์เว็บอย่างเป็นทางการ  <a href="https://cyberpunkr.io/">https://cyberpunkr.io/  </a> ลงในบุ๊กมาร์กและตรวจสอบโดเมนก่อนที่คุณจะเยี่ยมชมอย่างละเอียด.</p>      </li>  </ul>  <p>หากคุณไม่รู้จักกับกิจกรรมนี้, กรุณาติดต่อฝ่ายบริการลูกค้าของเราทันที: support@cyberpunkr.io</p>  <p style="line-height:22px;color:#76808f;margin-top:36px">ทีม Cyberpunk R <br>นี่คือข้อความที่ส่งอัตโนมัติ, โปรดอย่าตอบกลับ.</p>  </div>  <p style="padding:20px;font-size:14px;text-align:center">ลิขสิทธิ์© 2024 CYBERPUNK R สงวนลิขสิทธิ์.</p></div></div></div>'
+    # 英语版本
+  [verificationCode.ru]
+    # 邮件来源
+      from = "Cyberpunk R Team<cyberpunkrofficial@gmail.com>"
+      # 邮件主题
+      subject = "Confirm Your Email Verification"
+      # 内容类型，可选："text/html" | "text/plain"
+      contentType = "text/html"
+      # 邮件内容，必需保留${code}位置
+      body = '<div> <style>div {    font-family: BinancePlex, Arial, PingFangSC-Regular, "Microsoft YaHei", sans-serif, serif, EmojiFont } p { padding: 0; margin: 0; font-size: 14px; font-weight: 400 } </style> <div style="width:600px;max-width:100%;background:#f9f9f9;border-radius:10px;margin:0 auto"><img data-imagetype="External" src="https://tgsvweb.cyberpunkr.io/resource/upload/email/email.png" width="100%"><div style="padding:0 20px 40px">  <h2 style="color:#1e2026">Верификация электронной почты от Cyberpunk R</h2><p>Добро пожаловать в Cyberpunk R!</p><p>Вот ваш код верификации аккаунта: </p><h3 style="font-weight:700;font-size:24px;line-height:36px;color:#ffc107">${code}</h3><div style="color:#000"><p>Советы по безопасности:&nbsp;</p><ul><li><p>Никогда не сообщайте свой пароль никому.</p> </li> <li><p>Никогда не звоните по номерам, указанным людьми, утверждающими, что они поддержка Cyberpunk R.</p></li><li><p>Никогда не отправляйте деньги людям, утверждающим, что они члены команды Cyberpunk R.</p></li> <li> <p>•	Добавьте в закладки официальный сайт  <a href="https://cyberpunkr.io/">https://cyberpunkr.io/  </a> и дважды проверьте домен перед посещением.</p></li></ul><p>Если вы не узнаете эту активность, немедленно свяжитесь с нашей службой поддержки: support@cyberpunkr.io</p><p style="line-height:22px;color:#76808f;margin-top:36px">Команда Cyberpunk R <br>Это автоматическое сообщение, не отвечайте на него.</p></div><p style="padding:20px;font-size:14px;text-align:center">Copyright© 2024 CYBERPUNK R Все права защищены.</p></div></div></div>'

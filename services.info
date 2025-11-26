@@ -1,0 +1,4 @@
+名称                    本地目录                 进程ID                   etc目录          config目录
+Mesh                   ./mesh                   ./run/mesh.pid           ./etc           ./config         
+Web                    ./web                    ./run/web.pid            ./etc           ./config 
+Center                 ./center                 ./run/center.pid         ./etc           ./config 

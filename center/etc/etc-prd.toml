@@ -1,0 +1,278 @@
+# 进程号
+pid = "./run/center.pid"
+# 统一时区设置。项目中的时间获取请使用xtime.Now()
+timezone = "Local"
+
+[cluster]
+    [cluster.mesh]
+        # 实例名称
+        name = "center"
+        # 编解码器。可选：json | proto
+        codec = "json"
+
+[config]
+    [config.etcd]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:2379"]
+        # 客户端拨号超时时间，支持单位：纳秒（ns）、微秒（us | µs）、毫秒（ms）、秒（s）、分（m）、小时（h）、天（d）。默认为5s
+        dialTimeout = "5s"
+        # 路径。默认为/config
+        path = "/config"
+        # 读写模式。可选：read-only | read-write，默认为read-only
+        mode = "read-write"
+
+[locate]
+    [locate.redis]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号
+        db = 8
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+        # key前缀
+        prefix = "xbase"
+
+[registry]
+    [registry.consul]
+        # 客户端连接地址
+        addr = "127.0.0.1:8500"
+        # 是否启用健康检查
+        healthCheck = true
+        # 健康检查时间间隔（秒），仅在启用健康检查后生效
+        healthCheckInterval = 10
+        # 健康检查超时时间（秒），仅在启用健康检查后生效
+        healthCheckTimeout = 5
+        # 是否启用心跳检查
+        heartbeatCheck = true
+        # 心跳检查时间间隔（秒），仅在启用心跳检查后生效
+        heartbeatCheckInterval = 10
+        # 健康检测失败后自动注销服务时间（秒）
+        deregisterCriticalServiceAfter = 30
+
+[transport]
+    [transport.rpcx]
+        # RPCX服务器相关配置
+        [transport.rpcx.server]
+            # 服务器监听地址，空或:0时系统将会随机端口号
+            addr = ":0"
+            # 秘钥文件
+            keyFile = ""
+            # 证书文件
+            certFile = ""
+        # RPCX服务器相关配置
+        [transport.rpcx.client]
+            # 证书文件
+            certFile = ""
+            # 证书域名
+            serverName = ""
+            # 连接池大小，默认为10
+            poolSize = 10
+
+[packet]
+    # 字节序，默认为big。可选：little | big
+    byteOrder = "big"
+    # 路由字节数，默认为2字节
+    routeBytes = 4
+    # 序列号字节数，默认为2字节
+    seqBytes = 0
+    # 消息字节数，默认为5000字节
+    bufferBytes = 100000
+
+[log]
+    [log.zap]
+        # 日志输出文件
+        file = "./log/xbase.log"
+        # 日志输出级别，可选：debug | info | warn | error | fatal | panic
+        level = "debug"
+        # 日志输出格式，可选：text | json
+        format = "text"
+        # 是否输出到终端
+        stdout = false
+        # 时间格式，标准库时间格式
+        timeFormat = "2006/01/02 15:04:05.000000"
+        # 堆栈的最低输出级别，可选：debug | info | warn | error | fatal | panic
+        stackLevel = "error"
+        # 文件最大留存时间，d:天、h:时、m:分、s:秒
+        fileMaxAge = "7d"
+        # 文件最大尺寸限制，单位（MB）
+        fileMaxSize = 100
+        # 文件切割方式
+        fileCutRule = "day"
+        # 是否启用调用文件全路径
+        callerFullPath = false
+        # 是否启用分级存储
+        classifiedStorage = false
+
+[jwt]
+    # jwt发行方
+    issuer = "xrobot"
+    # 过期时间
+    validDuration = 7200000
+    # 秘钥KEY
+    secretKey = "MZlD9KpffCPh7oJtCaDoqFQE1cqZyVKfoxeQdYy4mkYKkBUCQQDQpPO7MmTPmuLI"
+    # 身份认证KEY
+    identityKey = "uid"
+    # TOKEN查找位置
+    locations = "query:token"
+    # 存储组件
+    [jwt.store]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号
+        db = 9
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+
+[mysql]
+    # 默认
+    [mysql.default]
+        # dsn连接信息
+        dsn = "root:fmtes#$#232RobotEf@tcp(127.0.0.1:3306)/tron.robot?charset=utf8mb4&parseTime=True&loc=Local"
+        # 日志级别; silent | error | warn | info
+        logLevel = "error"
+        # 慢日志阈值;ms
+        slowThreshold = 200
+        #最大连空闲接数
+        maxIdleConns = 256
+        #最大连接数
+        maxOpenConns = 1024
+        #最大连接数
+        connMaxLifetime = 300
+[cache]
+    [cache.redis]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号
+        db = 10
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+        # key前缀，默认为cache
+        prefix = "cache"
+        # 空值，默认为cache@nil
+        nilValue = "cache@nil"
+        # 空值过期时间，默认为10s
+        nilExpiration = "10s"
+        # 最小过期时间，默认为1h
+        minExpiration = "1h"
+        # 最大过期时间，默认为24h
+        maxExpiration = "24h"
+[redis]
+    # 默认
+    [redis.default]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号
+        db = 3
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+    # wallet redis
+    [redis.userwallet]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号
+        db = 4
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+    # 用户输入按钮检测
+    [redis.waitForInput]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号 用户输入按钮检测 连接5
+        db = 5
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+    #加密货币用的库
+    [redis.cryptocurrencies]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号 用户输入按钮检测 连接5
+        db = 6
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+    #配置缓存
+    [redis.option]
+        # 客户端连接地址
+        addrs = ["127.0.0.1:6379"]
+        # 数据库号 用户输入按钮检测 连接5
+        db = 7
+        # 用户名
+        username = ""
+        # 密码
+        password = "crot568Ze#mTeQC"
+        # 最大重试次数
+        maxRetries = 3
+
+
+[mail]
+    # 服务器地址
+    host = "smtp.gmail.com"
+    # 服务器端口
+    port = 587
+    # 用户名
+    username = "kosu319@gmail.com"
+    # 密码
+    password = "hzjtydhcfjvyqxex"
+    # 密码
+    send-userName = "Cyberpunk R"
+
+[google]
+    [google.identity]
+        [google.identity.default]
+            # 客户端ID
+            audience = "756118858784-3hheeceq786vpq9la22ef7prqqg4t5bf.apps.googleusercontent.com"
+
+[exchangeRates]
+    [exchangeRates.default]
+        # API接口Key
+        apiKey = "chZJrD87XVTGNMHGDmLXoHWvBrLiI8eG"
+        # 标的货币
+        underlyingCurrency = "USD"
+        # 缓存key
+        cacheKey = "exchange:rates"
+        # 缓存过期时间
+        expiration = 86400
+
+[payment]
+    # 进账支付配置
+    [payment.in]
+        # 支付成功后通知的基础地址
+        notifyBaseUrl = "http://43.199.7.89:8099"
+        # 支付成功后跳转地址
+        jumpUrl = "http://192.168.0.95:8080/"
+    # 出账支付配置
+    [payment.out]
+[twitter]
+    # consumer key
+    consumerKey = "tOoaMqZtk9oj2qQNEU3ueqqW0"
+    # consumer secret
+    consumerSecret = "oHmqhHiMZxEU5E85YX4SYCfwQQA5vQItQNBh43RsvZ0LCq2PD4"
+    # 授权回调地址
+    oauthCallbackURL = "http://op.mega2win.com/passport/twitter/callback"
