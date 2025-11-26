@@ -20,7 +20,7 @@ package rpc
 import (
 	"context"
 	"fmt"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetConfirmedBlock returns identity and transaction information about a confirmed block in the ledger.

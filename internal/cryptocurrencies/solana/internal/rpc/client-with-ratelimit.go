@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc/jsonrpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc/jsonrpc"
 
 	"go.uber.org/ratelimit"
 )

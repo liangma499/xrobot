@@ -5,7 +5,7 @@ import (
 
 	"xbase/cluster/mesh"
 
-	"tron_robot/internal/service/commission/pb"
+	"xrobot/internal/service/commission/pb"
 )
 
 const (

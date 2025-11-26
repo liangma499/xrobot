@@ -1,16 +1,16 @@
 package bnbscan
 
 import (
-	"tron_robot/internal/code"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/code"
+	"xrobot/internal/xtypes"
 
 	"fmt"
 	"math/big"
 	"strconv"
 	"strings"
-	"tron_robot/internal/cryptocurrencies/bnbscan/internal"
-	optionCurrencyNetworkCfg "tron_robot/internal/option/option-currency-network"
 	"xbase/errors"
+	"xrobot/internal/cryptocurrencies/bnbscan/internal"
+	optionCurrencyNetworkCfg "xrobot/internal/option/option-currency-network"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/shopspring/decimal"

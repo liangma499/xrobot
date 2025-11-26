@@ -2,21 +2,21 @@ package user
 
 import (
 	"context"
-	optionChannelDao "tron_robot/internal/dao/option-channel"
-	userDao "tron_robot/internal/dao/user"
-	userBaseDao "tron_robot/internal/dao/user-base"
-	"tron_robot/internal/event/message"
-	"tron_robot/internal/model"
+	optionChannelDao "xrobot/internal/dao/option-channel"
+	userDao "xrobot/internal/dao/user"
+	userBaseDao "xrobot/internal/dao/user-base"
+	"xrobot/internal/event/message"
+	"xrobot/internal/model"
 
-	optiontelegramcmd "tron_robot/internal/option/option-telegram-cmd"
-	"tron_robot/internal/service/user/pb"
-	tgmsg "tron_robot/internal/xtelegram/tg-msg"
-	tgtemplate "tron_robot/internal/xtelegram/tg-template"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	waitforinput "tron_robot/internal/xtelegram/wait-for-input"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
 	"xbase/utils/xrand"
+	optiontelegramcmd "xrobot/internal/option/option-telegram-cmd"
+	"xrobot/internal/service/user/pb"
+	tgmsg "xrobot/internal/xtelegram/tg-msg"
+	tgtemplate "xrobot/internal/xtelegram/tg-template"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	waitforinput "xrobot/internal/xtelegram/wait-for-input"
+	"xrobot/internal/xtypes"
 )
 
 func (s *Server) doSubscribeMessageStart(uuid string, payload *message.MessageStart) {

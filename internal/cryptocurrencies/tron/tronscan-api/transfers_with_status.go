@@ -1,6 +1,6 @@
 package tronscanapi
 
-import "tron_robot/internal/cryptocurrencies/tron/internal"
+import "xrobot/internal/cryptocurrencies/tron/internal"
 
 type TransfersWithStatusReq struct {
 	Start     int64  `json:"start"`      //Start index，default is 0

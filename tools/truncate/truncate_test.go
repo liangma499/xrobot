@@ -3,7 +3,7 @@ package main_test
 import (
 	"fmt"
 	"testing"
-	mysqldefault "tron_robot/internal/component/mysql/mysql-default"
+	mysqldefault "xrobot/internal/component/mysql/mysql-default"
 
 	"xbase/config"
 	"xbase/etc"

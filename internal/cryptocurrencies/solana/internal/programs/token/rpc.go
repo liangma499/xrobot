@@ -21,9 +21,9 @@ import (
 	"context"
 	"fmt"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 )
 
 const MINT_SIZE = 82

@@ -2,7 +2,7 @@ package model
 
 import (
 	"time"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 )
 
 // 卡片配置表 用户类型

@@ -16,7 +16,7 @@ package rpc
 
 import (
 	"context"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetClusterNodes returns information about all the nodes participating in the cluster.

@@ -21,7 +21,7 @@ import (
 	"encoding/base64"
 	"testing"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	"github.com/mr-tron/base58"
 	"github.com/stretchr/testify/assert"

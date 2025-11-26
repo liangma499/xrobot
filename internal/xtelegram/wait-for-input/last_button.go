@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 	"sync"
-	rediswaitForInput "tron_robot/internal/component/redis/redis-wait-for-input"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
+	rediswaitForInput "xrobot/internal/component/redis/redis-wait-for-input"
+	"xrobot/internal/xtypes"
 
 	"github.com/go-redis/redis/v8"
 )

@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"strconv"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/abi"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/abi"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 
 	"google.golang.org/protobuf/proto"
 )

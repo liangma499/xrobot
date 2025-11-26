@@ -21,13 +21,13 @@ import (
 	"context"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
 	"github.com/spf13/viper"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/system"
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/tokenregistry"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/system"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/tokenregistry"
 
 	"github.com/spf13/cobra"
 )

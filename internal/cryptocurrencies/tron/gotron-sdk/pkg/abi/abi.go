@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 
 	eABI "github.com/ethereum/go-ethereum/accounts/abi"
 	eCommon "github.com/ethereum/go-ethereum/common"

@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 	"testing"
-	ranks "tron_robot/internal/rank"
 	"xbase/utils/xconv"
+	ranks "xrobot/internal/rank"
 )
 
 var rank *ranks.Rank

@@ -2,12 +2,12 @@ package business
 
 import (
 	"context"
-	userBaseDao "tron_robot/internal/dao/user-base"
-	"tron_robot/internal/event/message"
-	"tron_robot/internal/service/business/internal"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
 	"xbase/task"
 	"xbase/utils/xconv"
+	userBaseDao "xrobot/internal/dao/user-base"
+	"xrobot/internal/event/message"
+	"xrobot/internal/service/business/internal"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 func (s *Server) doSubscribeMessageBusiness(uuid string, payload *message.MessageBusiness) {

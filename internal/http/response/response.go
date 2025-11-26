@@ -2,9 +2,9 @@ package response
 
 import (
 	"net/http"
-	"tron_robot/internal/code"
-	"tron_robot/internal/http/common"
 	"xbase/codes"
+	"xrobot/internal/code"
+	"xrobot/internal/http/common"
 
 	"github.com/gin-gonic/gin"
 )

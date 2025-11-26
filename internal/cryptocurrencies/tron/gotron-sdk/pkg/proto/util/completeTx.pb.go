@@ -7,12 +7,13 @@
 package util
 
 import (
-	api "tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
-	core "tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+	api "xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
+	core "xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (

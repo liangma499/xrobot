@@ -2,11 +2,11 @@ package webhooktg
 
 import (
 	"strings"
-	"tron_robot/internal/event/message"
-	"tron_robot/internal/xtelegram/telegram/types"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
 	"xbase/log"
 	"xbase/utils/xconv"
+	"xrobot/internal/event/message"
+	"xrobot/internal/xtelegram/telegram/types"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 func (a *API) botMsg(msg *types.Message, ip, channelCode string) error {

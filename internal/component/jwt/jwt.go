@@ -2,9 +2,9 @@ package jwt
 
 import (
 	"sync"
-	"tron_robot/internal/component/redis"
 	"xbase/etc"
 	"xbase/log"
+	"xrobot/internal/component/redis"
 
 	"xbase/utils/jwt"
 )

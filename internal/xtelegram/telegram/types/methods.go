@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"tron_robot/internal/xtelegram/telegram/config"
+	"xrobot/internal/xtelegram/telegram/config"
 )
 
 // SetWebhook Specify a URL and receive incoming updates via an outgoing webhook.

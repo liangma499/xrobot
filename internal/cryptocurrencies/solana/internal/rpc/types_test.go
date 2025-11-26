@@ -17,7 +17,7 @@ package rpc
 import (
 	stdjson "encoding/json"
 	"testing"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 
 	"github.com/stretchr/testify/assert"
 )

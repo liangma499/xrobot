@@ -1,11 +1,12 @@
 package usertrade
 
 import (
-	"gorm.io/gorm"
 	"sync"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
-	"tron_robot/internal/dao/user-trade/internal"
-	modelpkg "tron_robot/internal/model"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/user-trade/internal"
+	modelpkg "xrobot/internal/model"
+
+	"gorm.io/gorm"
 )
 
 type (

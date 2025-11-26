@@ -2,7 +2,7 @@ package xmath_test
 
 import (
 	"testing"
-	"tron_robot/internal/utils/xmath"
+	"xrobot/internal/utils/xmath"
 )
 
 func TestFloor(t *testing.T) {

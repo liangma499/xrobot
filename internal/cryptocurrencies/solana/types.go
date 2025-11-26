@@ -1,16 +1,16 @@
 package solana
 
 import (
-	"tron_robot/internal/code"
+	"xrobot/internal/code"
 
 	"fmt"
-	httpClient "tron_robot/internal/cryptocurrencies/solana/internal/http-client"
-	optionCurrencyNetworkCfg "tron_robot/internal/option/option-currency-network"
-	"tron_robot/internal/xtypes"
 	"xbase/errors"
+	httpClient "xrobot/internal/cryptocurrencies/solana/internal/http-client"
+	optionCurrencyNetworkCfg "xrobot/internal/option/option-currency-network"
+	"xrobot/internal/xtypes"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
 	"github.com/shopspring/decimal"
 )

@@ -5,13 +5,13 @@ import (
 	"fmt"
 	"sync"
 	"time"
-	redispayment "tron_robot/internal/component/redis/redis-crypto-currencies"
-	"tron_robot/internal/model"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
 	"xbase/utils/xconv"
 	"xbase/utils/xrand"
 	"xbase/utils/xtime"
+	redispayment "xrobot/internal/component/redis/redis-crypto-currencies"
+	"xrobot/internal/model"
+	"xrobot/internal/xtypes"
 
 	"github.com/go-redis/redis/v8"
 )

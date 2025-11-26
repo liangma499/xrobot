@@ -2,19 +2,20 @@ package paymentcryptotransaction
 
 import (
 	"sync"
-	"tron_robot/internal/dao/payment-crypto-transaction/internal"
-	modelpkg "tron_robot/internal/model"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/payment-crypto-transaction/internal"
+	modelpkg "xrobot/internal/model"
+
 	"gorm.io/gorm"
 )
 
 type (
-	Columns = internal.Columns
-	OrderBy = internal.OrderBy
+	Columns    = internal.Columns
+	OrderBy    = internal.OrderBy
 	FilterFunc = internal.FilterFunc
 	UpdateFunc = internal.UpdateFunc
 	ColumnFunc = internal.ColumnFunc
-	OrderFunc = internal.OrderFunc
+	OrderFunc  = internal.OrderFunc
 )
 
 type PaymentCryptoTransaction struct {
@@ -24,6 +25,7 @@ type PaymentCryptoTransaction struct {
 func NewPaymentCryptoTransaction(db *gorm.DB) *PaymentCryptoTransaction {
 	return &PaymentCryptoTransaction{PaymentCryptoTransaction: internal.NewPaymentCryptoTransaction(db)}
 }
+
 var (
 	once     sync.Once
 	instance *PaymentCryptoTransaction

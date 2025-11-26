@@ -2,13 +2,13 @@ package internal
 
 import (
 	"context"
-	optionChannelDao "tron_robot/internal/dao/option-channel"
-	"tron_robot/internal/event/message"
-	"tron_robot/internal/model"
-	tgmsg "tron_robot/internal/xtelegram/tg-msg"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	waitforinput "tron_robot/internal/xtelegram/wait-for-input"
 	"xbase/log"
+	optionChannelDao "xrobot/internal/dao/option-channel"
+	"xrobot/internal/event/message"
+	"xrobot/internal/model"
+	tgmsg "xrobot/internal/xtelegram/tg-msg"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	waitforinput "xrobot/internal/xtelegram/wait-for-input"
 )
 
 // "✅TRX闪兑"

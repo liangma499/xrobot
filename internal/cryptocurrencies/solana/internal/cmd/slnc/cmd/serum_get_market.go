@@ -23,9 +23,9 @@ import (
 	"math/big"
 	"strings"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/serum"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/serum"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
 	"github.com/ryanuber/columnize"
 	"github.com/spf13/cobra"

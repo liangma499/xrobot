@@ -19,8 +19,8 @@ package tokenregistry
 import (
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 )
 
 const TOKEN_META_SIZE = 229

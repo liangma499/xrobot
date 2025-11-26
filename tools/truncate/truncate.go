@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	mysqldefault "tron_robot/internal/component/mysql/mysql-default"
+	mysqldefault "xrobot/internal/component/mysql/mysql-default"
 
 	"xbase/config"
 	"xbase/etc"

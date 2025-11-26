@@ -16,7 +16,7 @@ package rpc
 
 import (
 	"context"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetTokenLargestAccounts returns the 20 largest accounts of a particular SPL Token type.

@@ -2,7 +2,7 @@ package model
 
 import (
 	"time"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 )
 
 type AmountUserRecordStauts int32

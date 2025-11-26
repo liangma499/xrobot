@@ -7,12 +7,13 @@
 package api
 
 import (
-	core "tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	reflect "reflect"
+	sync "sync"
+	core "xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	reflect "reflect"
-	sync "sync"
 )
 
 const (
@@ -1688,7 +1689,7 @@ func (x *TimePaginatedMessage) GetLimit() int64 {
 	return 0
 }
 
-//deprecated
+// deprecated
 type AccountNetMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -3265,9 +3266,9 @@ type SpendAuthSigParameters struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Ask    []byte `protobuf:"bytes,1,opt,name=ask,proto3" json:"ask,omitempty"`
-	Ttron_robot []byte `protobuf:"bytes,2,opt,name=tx_hash,json=ttron_robot,proto3" json:"tx_hash,omitempty"`
-	Alpha  []byte `protobuf:"bytes,3,opt,name=alpha,proto3" json:"alpha,omitempty"`
+	Ask     []byte `protobuf:"bytes,1,opt,name=ask,proto3" json:"ask,omitempty"`
+	Txrobot []byte `protobuf:"bytes,2,opt,name=tx_hash,json=txrobot,proto3" json:"tx_hash,omitempty"`
+	Alpha   []byte `protobuf:"bytes,3,opt,name=alpha,proto3" json:"alpha,omitempty"`
 }
 
 func (x *SpendAuthSigParameters) Reset() {
@@ -3309,9 +3310,9 @@ func (x *SpendAuthSigParameters) GetAsk() []byte {
 	return nil
 }
 
-func (x *SpendAuthSigParameters) GetTtron_robot() []byte {
+func (x *SpendAuthSigParameters) GetTxrobot() []byte {
 	if x != nil {
-		return x.Ttron_robot
+		return x.Txrobot
 	}
 	return nil
 }

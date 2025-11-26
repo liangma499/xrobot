@@ -18,7 +18,7 @@ package rpc
 
 import (
 	"context"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetProgramAccounts returns all accounts owned by the provided program publicKey.

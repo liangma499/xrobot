@@ -15,7 +15,7 @@
 package token
 
 import (
-	ag_binary "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	ag_binary "xrobot/internal/cryptocurrencies/solana/internal/binary"
 )
 
 type AuthorityType ag_binary.BorshEnum

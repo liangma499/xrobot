@@ -6,8 +6,8 @@ import (
 
 	"xbase/cluster/mesh"
 
-	"tron_robot/internal/event/message"
-	"tron_robot/internal/service/business/pb"
+	"xrobot/internal/event/message"
+	"xrobot/internal/service/business/pb"
 )
 
 const (

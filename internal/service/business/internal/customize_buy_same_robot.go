@@ -2,17 +2,17 @@ package internal
 
 import (
 	"context"
-	optionChannelDao "tron_robot/internal/dao/option-channel"
-	optionListenerAddressDao "tron_robot/internal/dao/option-listener-address"
-	paymentAmountUserDao "tron_robot/internal/dao/payment-amount-user"
-	"tron_robot/internal/event/message"
-	"tron_robot/internal/model"
-	optiontelegramcmd "tron_robot/internal/option/option-telegram-cmd"
-	tgmsg "tron_robot/internal/xtelegram/tg-msg"
-	tgtemplate "tron_robot/internal/xtelegram/tg-template"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
+	optionChannelDao "xrobot/internal/dao/option-channel"
+	optionListenerAddressDao "xrobot/internal/dao/option-listener-address"
+	paymentAmountUserDao "xrobot/internal/dao/payment-amount-user"
+	"xrobot/internal/event/message"
+	"xrobot/internal/model"
+	optiontelegramcmd "xrobot/internal/option/option-telegram-cmd"
+	tgmsg "xrobot/internal/xtelegram/tg-msg"
+	tgtemplate "xrobot/internal/xtelegram/tg-template"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	"xrobot/internal/xtypes"
 
 	"github.com/shopspring/decimal"
 )

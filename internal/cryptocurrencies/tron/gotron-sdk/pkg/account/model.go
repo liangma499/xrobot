@@ -1,7 +1,7 @@
 package account
 
 import (
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 )
 
 // FrozenResource by account

@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 
 	"go.uber.org/zap"
 	"google.golang.org/protobuf/proto"

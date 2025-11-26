@@ -22,10 +22,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 )
 
 func init() {

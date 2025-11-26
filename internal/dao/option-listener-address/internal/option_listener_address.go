@@ -12,7 +12,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-	modelpkg "tron_robot/internal/model"
+	modelpkg "xrobot/internal/model"
 
 	"gorm.io/gorm"
 )

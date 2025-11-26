@@ -2,9 +2,9 @@ package userbalancedeposittransaction
 
 import (
 	"sync"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
-	"tron_robot/internal/dao/user-balance-deposit-transaction/internal"
-	modelpkg "tron_robot/internal/model"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/user-balance-deposit-transaction/internal"
+	modelpkg "xrobot/internal/model"
 
 	"gorm.io/gorm"
 )

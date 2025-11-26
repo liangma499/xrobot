@@ -2,9 +2,9 @@ package userloginlog
 
 import (
 	"sync"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
-	"tron_robot/internal/dao/user-login-log/internal"
-	"tron_robot/internal/model"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/user-login-log/internal"
+	"xrobot/internal/model"
 
 	"gorm.io/gorm"
 )

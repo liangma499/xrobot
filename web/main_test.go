@@ -2,8 +2,8 @@ package main_test
 
 import (
 	"testing"
-	"tron_robot/internal/utils/xresource"
 	"xbase/log"
+	"xrobot/internal/utils/xresource"
 )
 
 func TestClient_Config(t *testing.T) {

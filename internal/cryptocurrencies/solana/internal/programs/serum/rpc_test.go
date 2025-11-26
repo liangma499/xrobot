@@ -23,10 +23,10 @@ import (
 	"os"
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc/ws"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc/ws"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
 	"github.com/stretchr/testify/require"
 )

@@ -14,8 +14,8 @@ import (
 
 	"xbase/config/etcd"
 
-	mailcomp "tron_robot/internal/component/mail"
-	"tron_robot/internal/xtypes"
+	mailcomp "xrobot/internal/component/mail"
+	"xrobot/internal/xtypes"
 
 	"github.com/chanyipiaomiao/hltool"
 	"gopkg.in/gomail.v2"

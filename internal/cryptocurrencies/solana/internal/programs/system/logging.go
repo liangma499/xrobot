@@ -22,9 +22,9 @@ import (
 	"go.uber.org/zap"
 )
 
-var traceEnabled = logging.IsTraceEnabled("solana-go", "tron_robot/internal/cryptocurrencies/solana/internal/system")
+var traceEnabled = logging.IsTraceEnabled("solana-go", "xrobot/internal/cryptocurrencies/solana/internal/system")
 var zlog = zap.NewNop()
 
 func init() {
-	logging.Register("tron_robot/internal/cryptocurrencies/solana/internal/system", &zlog)
+	logging.Register("xrobot/internal/cryptocurrencies/solana/internal/system", &zlog)
 }

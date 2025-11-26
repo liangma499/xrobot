@@ -17,7 +17,7 @@ package main
 import (
 	"context"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
 	"github.com/davecgh/go-spew/spew"
 )

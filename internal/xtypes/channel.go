@@ -3,9 +3,9 @@ package xtypes
 import (
 	"database/sql/driver"
 	"encoding/json"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
 	"xbase/errors"
 	"xbase/log"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 
 	"github.com/shopspring/decimal"
 )

@@ -18,10 +18,10 @@ import (
 	"errors"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	format "tron_robot/internal/cryptocurrencies/solana/internal/text/format"
+	format "xrobot/internal/cryptocurrencies/solana/internal/text/format"
 
 	treeout "github.com/gagliardetto/treeout"
 )

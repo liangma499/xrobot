@@ -15,7 +15,7 @@
 package main
 
 import (
-	"tron_robot/internal/cryptocurrencies/solana/internal/cmd/slnc/cmd"
+	"xrobot/internal/cryptocurrencies/solana/internal/cmd/slnc/cmd"
 )
 
 var version = "dev"

@@ -6,10 +6,10 @@ import (
 	"math/big"
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/abi"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/abi"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

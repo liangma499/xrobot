@@ -19,7 +19,7 @@ package cmd
 
 import (
 	"fmt"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 
 	"github.com/spf13/cobra"
 )

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"tron_robot/internal/cryptocurrencies/cryptobot-sdk-golang/cryptobot"
+	"xrobot/internal/cryptocurrencies/cryptobot-sdk-golang/cryptobot"
 )
 
 func transfer(client *cryptobot.Client) {

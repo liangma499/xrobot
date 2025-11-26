@@ -18,7 +18,7 @@ import (
 	"bytes"
 	"fmt"
 
-	ag_binary "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	ag_binary "xrobot/internal/cryptocurrencies/solana/internal/binary"
 )
 
 func encodeT(data any, buf *bytes.Buffer) error {

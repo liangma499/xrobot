@@ -19,7 +19,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

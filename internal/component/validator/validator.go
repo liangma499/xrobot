@@ -2,7 +2,7 @@ package validator
 
 import (
 	"sync"
-	"tron_robot/internal/component/validator/custom/date"
+	"xrobot/internal/component/validator/custom/date"
 
 	"github.com/go-playground/validator/v10"
 )

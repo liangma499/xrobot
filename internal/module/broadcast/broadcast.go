@@ -3,8 +3,8 @@ package broadcast
 import (
 	"context"
 	"sync"
-	userevt "tron_robot/internal/event/user"
 	"xbase/cluster"
+	userevt "xrobot/internal/event/user"
 )
 
 type proxy interface {

@@ -6,9 +6,9 @@ import (
 	"io"
 	"net/http"
 
-	"tron_robot/internal/xtelegram/telegram/client"
-	"tron_robot/internal/xtelegram/telegram/config"
-	"tron_robot/internal/xtelegram/telegram/types"
+	"xrobot/internal/xtelegram/telegram/client"
+	"xrobot/internal/xtelegram/telegram/config"
+	"xrobot/internal/xtelegram/telegram/types"
 )
 
 var Core Api

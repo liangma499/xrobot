@@ -17,7 +17,7 @@ package vault
 import (
 	"fmt"
 	"os"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // Vault represents a `solana-go` wallet.  It contains the encrypted

@@ -1,6 +1,6 @@
 package user
 
-import "tron_robot/internal/xtypes"
+import "xrobot/internal/xtypes"
 
 type registerArgs struct {
 	account           string // 账号

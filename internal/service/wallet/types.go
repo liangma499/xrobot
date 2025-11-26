@@ -3,7 +3,7 @@ package wallet
 import (
 	"database/sql"
 	"time"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 )
 
 type incrBalanceArgs struct {

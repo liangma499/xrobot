@@ -1,10 +1,10 @@
 package route
 
 import (
-	"tron_robot/internal/http/middleware"
+	"xrobot/internal/http/middleware"
 
-	webhooktg "tron_robot/web/app/api/webhook-tg"
 	"xbase/transport"
+	webhooktg "xrobot/web/app/api/webhook-tg"
 
 	"github.com/gin-gonic/gin"
 )

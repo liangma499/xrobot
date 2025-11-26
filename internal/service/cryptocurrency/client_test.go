@@ -3,10 +3,10 @@ package cryptocurrency_test
 import (
 	"context"
 	"testing"
-	cryptocurrencysvc "tron_robot/internal/service/cryptocurrency"
-	cryptocurrencypb "tron_robot/internal/service/cryptocurrency/pb"
 	"xbase/registry/consul"
 	"xbase/transport/rpcx"
+	cryptocurrencysvc "xrobot/internal/service/cryptocurrency"
+	cryptocurrencypb "xrobot/internal/service/cryptocurrency/pb"
 )
 
 var transporter = rpcx.NewTransporter(

@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	rediscomp "tron_robot/internal/component/redis"
 	cacheRedis "xbase/cache/redis"
+	rediscomp "xrobot/internal/component/redis"
 
 	"github.com/go-redis/redis/v8"
 )

@@ -3,12 +3,12 @@ package user
 import (
 	"context"
 	"sync"
-	"tron_robot/internal/code"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
-	"tron_robot/internal/dao/user/internal"
-	"tron_robot/internal/model"
 	"xbase/errors"
 	"xbase/log"
+	"xrobot/internal/code"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/user/internal"
+	"xrobot/internal/model"
 
 	"gorm.io/gorm"
 )

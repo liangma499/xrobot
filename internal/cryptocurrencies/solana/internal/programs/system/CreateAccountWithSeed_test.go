@@ -19,8 +19,8 @@ import (
 	"strconv"
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	ag_gofuzz "github.com/gagliardetto/gofuzz"
 	ag_require "github.com/stretchr/testify/require"

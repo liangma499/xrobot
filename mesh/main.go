@@ -1,7 +1,6 @@
 package main
 
 import (
-	"tron_robot/mesh/app"
 	"xbase"
 	"xbase/cache"
 	credis "xbase/cache/redis"
@@ -16,6 +15,7 @@ import (
 	"xbase/log/zap"
 	"xbase/registry/consul"
 	"xbase/transport/rpcx"
+	"xrobot/mesh/app"
 )
 
 func main() {

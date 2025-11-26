@@ -20,8 +20,8 @@ package cmd
 import (
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/token"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/token"
 
 	"github.com/ryanuber/columnize"
 	"github.com/spf13/cobra"

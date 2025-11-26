@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"sync"
 	"time"
-	"tron_robot/internal/cryptocurrencies/tron/transfer"
-	tronscanapi "tron_robot/internal/cryptocurrencies/tron/tronscan-api"
-	optionCurrencyNetworkCfg "tron_robot/internal/option/option-currency-network"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
+	"xrobot/internal/cryptocurrencies/tron/transfer"
+	tronscanapi "xrobot/internal/cryptocurrencies/tron/tronscan-api"
+	optionCurrencyNetworkCfg "xrobot/internal/option/option-currency-network"
+	"xrobot/internal/xtypes"
 
 	"github.com/shopspring/decimal"
 )

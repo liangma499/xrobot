@@ -7,10 +7,10 @@ import (
 	"xbase/config/file"
 	"xbase/utils/xconv"
 
-	"tron_robot/internal/service/basic"
-	basepb "tron_robot/internal/service/basic/pb"
 	"xbase/registry/consul"
 	"xbase/transport/rpcx"
+	"xrobot/internal/service/basic"
+	basepb "xrobot/internal/service/basic/pb"
 )
 
 var transporter = rpcx.NewTransporter(

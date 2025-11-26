@@ -2,7 +2,7 @@ package walletsdk_test
 
 import (
 	"testing"
-	walletsdk "tron_robot/tools/wallet/wallet-sdk"
+	walletsdk "xrobot/tools/wallet/wallet-sdk"
 )
 
 func TestClient_GetBalance(t *testing.T) {

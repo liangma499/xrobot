@@ -1,6 +1,6 @@
 package xstr
 
-import "tron_robot/internal/component/snowflake"
+import "xrobot/internal/component/snowflake"
 
 // SerialNO 序列号
 func SerialNO() string {

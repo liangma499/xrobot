@@ -6,12 +6,12 @@ import (
 	"xbase/utils/xconv"
 
 	"fmt"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	associatedtokenaccount "tron_robot/internal/cryptocurrencies/solana/internal/programs/associated-token-account"
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/system"
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/token"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	associatedtokenaccount "xrobot/internal/cryptocurrencies/solana/internal/programs/associated-token-account"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/system"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/token"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/xtypes"
 
 	"github.com/shopspring/decimal"
 )

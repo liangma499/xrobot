@@ -1,11 +1,11 @@
 package xtypes
 
 import (
-	"tron_robot/internal/code"
-	"tron_robot/internal/utils/xcrypt"
 	"xbase/errors"
 	"xbase/log"
 	"xbase/utils/xrand"
+	"xrobot/internal/code"
+	"xrobot/internal/utils/xcrypt"
 )
 
 // 加密密码

@@ -1,8 +1,8 @@
 package cryptocurrency
 
 import (
-	"tron_robot/internal/service/cryptocurrency/pb"
 	"xbase/transport"
+	"xrobot/internal/service/cryptocurrency/pb"
 
 	"github.com/smallnest/rpcx/client"
 )

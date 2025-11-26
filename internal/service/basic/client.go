@@ -1,8 +1,8 @@
 package basic
 
 import (
-	"tron_robot/internal/service/basic/pb"
 	"xbase/transport"
+	"xrobot/internal/service/basic/pb"
 
 	"github.com/smallnest/rpcx/client"
 )

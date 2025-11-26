@@ -2,19 +2,20 @@ package paymentamountuserrecord
 
 import (
 	"sync"
-	"tron_robot/internal/dao/payment-amount-user-record/internal"
-	modelpkg "tron_robot/internal/model"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/payment-amount-user-record/internal"
+	modelpkg "xrobot/internal/model"
+
 	"gorm.io/gorm"
 )
 
 type (
-	Columns = internal.Columns
-	OrderBy = internal.OrderBy
+	Columns    = internal.Columns
+	OrderBy    = internal.OrderBy
 	FilterFunc = internal.FilterFunc
 	UpdateFunc = internal.UpdateFunc
 	ColumnFunc = internal.ColumnFunc
-	OrderFunc = internal.OrderFunc
+	OrderFunc  = internal.OrderFunc
 )
 
 type PaymentAmountUserRecord struct {
@@ -24,6 +25,7 @@ type PaymentAmountUserRecord struct {
 func NewPaymentAmountUserRecord(db *gorm.DB) *PaymentAmountUserRecord {
 	return &PaymentAmountUserRecord{PaymentAmountUserRecord: internal.NewPaymentAmountUserRecord(db)}
 }
+
 var (
 	once     sync.Once
 	instance *PaymentAmountUserRecord

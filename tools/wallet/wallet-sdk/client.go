@@ -42,10 +42,10 @@ func (c *Client) GetBalanceFull(base58Addr string) (rpc.JsonRpcResponse[rpc.Valu
 	)
 }
 
-func (c *Client) GetTransaction(ttron_robot string) (*client.Transaction, error) {
+func (c *Client) GetTransaction(txrobot string) (*client.Transaction, error) {
 	return c.client.GetTransaction(
 		context.TODO(),
-		ttron_robot,
+		txrobot,
 	)
 }
 func (c *Client) GetSlot() (uint64, error) {

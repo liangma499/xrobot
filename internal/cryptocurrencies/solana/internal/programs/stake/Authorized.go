@@ -17,9 +17,9 @@ package stake
 import (
 	"errors"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	ag_solanago "tron_robot/internal/cryptocurrencies/solana/internal"
+	ag_solanago "xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 type Authorized struct {

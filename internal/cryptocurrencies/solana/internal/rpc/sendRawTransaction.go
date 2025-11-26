@@ -19,7 +19,7 @@ package rpc
 import (
 	"context"
 	"encoding/base64"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // SendRawTransaction submits a signed transaction to the cluster for processing.

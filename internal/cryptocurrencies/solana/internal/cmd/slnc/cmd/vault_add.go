@@ -20,9 +20,9 @@ package cmd
 import (
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/cli"
-	"tron_robot/internal/cryptocurrencies/solana/internal/vault"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/cli"
+	"xrobot/internal/cryptocurrencies/solana/internal/vault"
 
 	"xbase/log"
 

@@ -7,8 +7,8 @@ import (
 	"log"
 	"time"
 
-	"tron_robot/internal/xtelegram/telegram/config"
-	"tron_robot/internal/xtelegram/telegram/types"
+	"xrobot/internal/xtelegram/telegram/config"
+	"xrobot/internal/xtelegram/telegram/types"
 )
 
 // GetUpdates Use this method to receive incoming updates using long polling (wiki). An Array of Update objects is returned.

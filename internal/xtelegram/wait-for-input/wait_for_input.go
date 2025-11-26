@@ -4,12 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	rediswaitForInput "tron_robot/internal/component/redis/redis-wait-for-input"
-	"tron_robot/internal/event/message"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
 	"xbase/utils/xconv"
+	rediswaitForInput "xrobot/internal/component/redis/redis-wait-for-input"
+	"xrobot/internal/event/message"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	"xrobot/internal/xtypes"
 )
 
 type WaitforinputInfo struct {

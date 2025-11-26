@@ -1,12 +1,12 @@
 package tgSet
 
 import (
-	"tron_robot/internal/code"
-	"tron_robot/internal/xtelegram/telegram/telegram"
-	"tron_robot/internal/xtelegram/telegram/types"
 	"xbase/errors"
 	"xbase/log"
 	"xbase/utils/xconv"
+	"xrobot/internal/code"
+	"xrobot/internal/xtelegram/telegram/telegram"
+	"xrobot/internal/xtelegram/telegram/types"
 )
 
 func SetChatMenuButton(botToken, username string, chatID int64) error {

@@ -16,7 +16,7 @@ package rpc
 
 import (
 	"context"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetStakeActivation returns epoch activation information for a stake account.

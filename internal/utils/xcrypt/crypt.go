@@ -1,8 +1,8 @@
 package xcrypt
 
 import (
-	"tron_robot/internal/utils/xhash"
 	"xbase/errors"
+	"xrobot/internal/utils/xhash"
 
 	"golang.org/x/crypto/bcrypt"
 )

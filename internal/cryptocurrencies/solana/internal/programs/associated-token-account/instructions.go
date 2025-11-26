@@ -17,10 +17,10 @@ package associatedtokenaccount
 import (
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	text "tron_robot/internal/cryptocurrencies/solana/internal/text"
+	text "xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	spew "github.com/davecgh/go-spew/spew"
 	treeout "github.com/gagliardetto/treeout"

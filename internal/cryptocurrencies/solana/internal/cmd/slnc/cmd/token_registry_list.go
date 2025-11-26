@@ -23,7 +23,7 @@ import (
 
 	"github.com/ryanuber/columnize"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/tokenregistry"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/tokenregistry"
 
 	"github.com/spf13/cobra"
 )

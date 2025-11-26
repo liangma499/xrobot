@@ -22,11 +22,11 @@ import (
 	"encoding/json"
 	"fmt"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	"github.com/gagliardetto/treeout"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
 )
 
 type MessageAddressTableLookupSlice []MessageAddressTableLookup

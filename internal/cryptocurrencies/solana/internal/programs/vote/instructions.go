@@ -19,10 +19,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gagliardetto/treeout"

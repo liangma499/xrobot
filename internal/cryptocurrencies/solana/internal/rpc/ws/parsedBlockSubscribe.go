@@ -17,8 +17,8 @@ package ws
 import (
 	"context"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 )
 
 type ParsedBlockResult struct {

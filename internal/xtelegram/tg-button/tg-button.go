@@ -1,9 +1,9 @@
 package tgbutton
 
 import (
-	"tron_robot/internal/xtelegram/telegram/types"
-	tginlinekeyboardbutton "tron_robot/internal/xtelegram/tg-inline-keyboard-button"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
+	"xrobot/internal/xtelegram/telegram/types"
+	tginlinekeyboardbutton "xrobot/internal/xtelegram/tg-inline-keyboard-button"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 type TelegramButton struct {

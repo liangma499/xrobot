@@ -17,7 +17,7 @@ package rpc
 import (
 	"context"
 	"errors"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 type GetTokenAccountsConfig struct {

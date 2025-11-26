@@ -3,12 +3,12 @@ package transfer_test
 import (
 	"encoding/hex"
 	"testing"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
-	"tron_robot/internal/cryptocurrencies/tron/transfer"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
 	"xbase/utils/xconv"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
+	"xrobot/internal/cryptocurrencies/tron/transfer"
+	"xrobot/internal/xtypes"
 )
 
 var (

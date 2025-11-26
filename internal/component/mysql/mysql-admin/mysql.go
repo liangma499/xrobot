@@ -2,7 +2,7 @@ package mysqladmin
 
 import (
 	"sync"
-	"tron_robot/internal/component/mysql"
+	"xrobot/internal/component/mysql"
 
 	"gorm.io/gorm"
 )

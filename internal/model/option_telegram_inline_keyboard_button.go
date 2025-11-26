@@ -3,9 +3,9 @@ package model
 import (
 	"fmt"
 	"time"
-	"tron_robot/internal/xtelegram/telegram/types"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtelegram/telegram/types"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	"xrobot/internal/xtypes"
 )
 
 //go:generate xgorm-dao-generator -model-dir=. -model-names=OptionTelegramInlineKeyboardButton -dao-dir=../dao/ -sub-pkg-enable=true -mysql-pkg-path=/internal/component/mysql/mysql-default

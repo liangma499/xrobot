@@ -1,7 +1,7 @@
 package solana
 
 import (
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 func SolanaPubkeyToAddress() (string, string) {

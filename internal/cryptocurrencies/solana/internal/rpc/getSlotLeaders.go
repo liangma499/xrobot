@@ -16,7 +16,7 @@ package rpc
 
 import (
 	"context"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetSlotLeaders returns the slot leaders for a given slot range.

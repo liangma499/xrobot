@@ -1,9 +1,6 @@
 package main
 
 import (
-	"tron_robot/internal/http"
-	"tron_robot/web/app/route"
-	"tron_robot/web/docs"
 	"xbase"
 	"xbase/config"
 	"xbase/config/etcd"
@@ -14,6 +11,9 @@ import (
 	"xbase/log/zap"
 	"xbase/registry/consul"
 	"xbase/transport/rpcx"
+	"xrobot/internal/http"
+	"xrobot/web/app/route"
+	"xrobot/web/docs"
 
 	"github.com/gin-gonic/gin"
 )

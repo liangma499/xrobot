@@ -3,9 +3,9 @@ package cryptocurrency
 import (
 	"context"
 	"sync"
-	"tron_robot/internal/event/cryptocurrencyevent"
-	"tron_robot/internal/service/cryptocurrency/pb"
 	"xbase/cluster/mesh"
+	"xrobot/internal/event/cryptocurrencyevent"
+	"xrobot/internal/service/cryptocurrency/pb"
 )
 
 // 配置中心数据 后台过来所有的配置走这个服务

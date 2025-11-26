@@ -2,10 +2,10 @@ package option
 
 import (
 	"context"
-	optionChannelDao "tron_robot/internal/dao/option-channel"
-	tgWebhook "tron_robot/internal/xtelegram/tg-webhook"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
+	optionChannelDao "xrobot/internal/dao/option-channel"
+	tgWebhook "xrobot/internal/xtelegram/tg-webhook"
+	"xrobot/internal/xtypes"
 )
 
 // 开卡

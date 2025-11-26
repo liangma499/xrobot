@@ -3,9 +3,9 @@ package rate_test
 import (
 	"testing"
 	"time"
-	"tron_robot/internal/service/wallet/rate"
 	"xbase/log"
 	"xbase/utils/xtime"
+	"xrobot/internal/service/wallet/rate"
 )
 
 func TestClient_Timer(t *testing.T) {

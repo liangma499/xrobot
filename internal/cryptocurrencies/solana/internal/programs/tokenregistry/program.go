@@ -19,7 +19,7 @@ package tokenregistry
 
 import (
 	"os"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 var mainnetProgramID = internal.MustPublicKeyFromBase58("CmPVzy88JSB4S223yCvFmBxTLobLya27KgEDeNPnqEub")

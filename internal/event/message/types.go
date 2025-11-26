@@ -1,7 +1,7 @@
 package message
 
 import (
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 const (

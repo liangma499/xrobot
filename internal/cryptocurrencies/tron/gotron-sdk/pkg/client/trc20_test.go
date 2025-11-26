@@ -3,7 +3,7 @@ package client_test
 import (
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

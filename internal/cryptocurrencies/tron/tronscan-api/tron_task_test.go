@@ -2,10 +2,10 @@ package tronscanapi_test
 
 import (
 	"testing"
-	tronscanapi "tron_robot/internal/cryptocurrencies/tron/tronscan-api"
 	"xbase/log"
 	"xbase/utils/xconv"
 	"xbase/utils/xtime"
+	tronscanapi "xrobot/internal/cryptocurrencies/tron/tronscan-api"
 )
 
 const (

@@ -3,12 +3,12 @@ package user_test
 import (
 	"context"
 	"testing"
-	usersvc "tron_robot/internal/service/user"
-	userpb "tron_robot/internal/service/user/pb"
-	"tron_robot/internal/utils/xcrypt"
 	"xbase/log"
 	"xbase/registry/consul"
 	"xbase/transport/rpcx"
+	usersvc "xrobot/internal/service/user"
+	userpb "xrobot/internal/service/user/pb"
+	"xrobot/internal/utils/xcrypt"
 
 	"google.golang.org/api/idtoken"
 )

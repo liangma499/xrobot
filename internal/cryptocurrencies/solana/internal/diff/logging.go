@@ -22,11 +22,11 @@ import (
 	"go.uber.org/zap"
 )
 
-var traceEnabled = logging.IsTraceEnabled("solana-go", "tron_robot/internal/cryptocurrencies/solana/internal/diff")
+var traceEnabled = logging.IsTraceEnabled("solana-go", "xrobot/internal/cryptocurrencies/solana/internal/diff")
 var zlog = zap.NewNop()
 
 func init() {
-	logging.Register("tron_robot/internal/cryptocurrencies/solana/internal/diff", &zlog)
+	logging.Register("xrobot/internal/cryptocurrencies/solana/internal/diff", &zlog)
 }
 
 type reflectType struct {

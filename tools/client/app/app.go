@@ -1,8 +1,8 @@
 package app
 
 import (
-	"tron_robot/tools/client/app/logic/lobby"
 	"xbase/cluster/client"
+	"xrobot/tools/client/app/logic/lobby"
 )
 
 func Init(proxy *client.Proxy) {

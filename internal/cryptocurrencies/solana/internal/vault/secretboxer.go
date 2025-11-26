@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/cli"
+	"xrobot/internal/cryptocurrencies/solana/internal/cli"
 
 	"github.com/pkg/errors"
 )

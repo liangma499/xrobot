@@ -1,6 +1,6 @@
 package tgtypes
 
-import tgconfig "tron_robot/internal/xtelegram/telegram/config"
+import tgconfig "xrobot/internal/xtelegram/telegram/config"
 
 type ParseMode string
 

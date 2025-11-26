@@ -20,8 +20,8 @@ import (
 	"context"
 	"errors"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 )
 
 // GetAccountInfo returns all information associated with the account of provided publicKey.

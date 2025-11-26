@@ -4,21 +4,21 @@ import (
 	"context"
 	"sync"
 	"sync/atomic"
-	"tron_robot/internal/code"
-	optionTelegramCmdDao "tron_robot/internal/dao/option-telegram-cmd"
-	"tron_robot/internal/model"
+	"xrobot/internal/code"
+	optionTelegramCmdDao "xrobot/internal/dao/option-telegram-cmd"
+	"xrobot/internal/model"
 
-	tgbutton "tron_robot/internal/xtelegram/tg-button"
-	tginlinekeyboardbutton "tron_robot/internal/xtelegram/tg-inline-keyboard-button"
-	tgkeyboardbutton "tron_robot/internal/xtelegram/tg-keyboard-button"
+	tgbutton "xrobot/internal/xtelegram/tg-button"
+	tginlinekeyboardbutton "xrobot/internal/xtelegram/tg-inline-keyboard-button"
+	tgkeyboardbutton "xrobot/internal/xtelegram/tg-keyboard-button"
 
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 
-	"tron_robot/internal/xtypes"
 	"xbase/config"
 	"xbase/config/etcd"
 	"xbase/errors"
 	"xbase/log"
+	"xrobot/internal/xtypes"
 )
 
 const (

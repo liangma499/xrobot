@@ -2,8 +2,8 @@ package helper
 
 import (
 	"net/http"
-	jwtcomp "tron_robot/internal/component/jwt"
 	"xbase/utils/jwt"
+	jwtcomp "xrobot/internal/component/jwt"
 )
 
 // GenerateToken 生成Token

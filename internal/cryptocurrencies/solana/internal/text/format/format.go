@@ -17,9 +17,9 @@ package format
 import (
 	"strings"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
-	. "tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
+	. "xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	"github.com/davecgh/go-spew/spew"
 )

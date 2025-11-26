@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"errors"
 	"time"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
+	"xrobot/internal/xtypes"
 )
 
 //go:generate xgorm-dao-generator -model-dir=. -model-names=PaymentAmountUser -dao-dir=../dao/ -sub-pkg-enable=true -mysql-pkg-path=/internal/component/mysql/mysql-default

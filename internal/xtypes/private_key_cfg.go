@@ -3,9 +3,9 @@ package xtypes
 import (
 	"database/sql/driver"
 	"encoding/json"
-	"tron_robot/internal/utils/xcrypt"
 	"xbase/errors"
 	"xbase/log"
+	"xrobot/internal/utils/xcrypt"
 )
 
 type PrivateKeyCfg struct {

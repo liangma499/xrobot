@@ -3,13 +3,13 @@ package backblaze_test
 import (
 	"context"
 	"testing"
-	"tron_robot/internal/component/backblaze"
+	"xrobot/internal/component/backblaze"
 )
 
 var ins = backblaze.NewInstance(&backblaze.Config{
 	Account:  "ad9fc922950a",
 	Key:      "005ae24f2177b8c8ab870d528fd0128464ff77e6ec",
-	Bucket:   "tron_robot-test",
+	Bucket:   "xrobot-test",
 	BasePath: "avatar/",
 })
 

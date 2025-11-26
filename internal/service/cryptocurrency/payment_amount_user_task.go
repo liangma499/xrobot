@@ -3,12 +3,12 @@ package cryptocurrency
 import (
 	"context"
 	"time"
-	optionChannelDao "tron_robot/internal/dao/option-channel"
-	paymentAmountUserDao "tron_robot/internal/dao/payment-amount-user"
-	tgmsg "tron_robot/internal/xtelegram/tg-msg"
 	"xbase/task"
 	"xbase/utils/xconv"
 	"xbase/utils/xtime"
+	optionChannelDao "xrobot/internal/dao/option-channel"
+	paymentAmountUserDao "xrobot/internal/dao/payment-amount-user"
+	tgmsg "xrobot/internal/xtelegram/tg-msg"
 
 	"github.com/smallnest/rpcx/log"
 	"gorm.io/gorm/clause"

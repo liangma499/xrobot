@@ -2,19 +2,20 @@ package platformpendingorder
 
 import (
 	"sync"
-	"tron_robot/internal/dao/platform-pending-order/internal"
-	modelpkg "tron_robot/internal/model"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/platform-pending-order/internal"
+	modelpkg "xrobot/internal/model"
+
 	"gorm.io/gorm"
 )
 
 type (
-	Columns = internal.Columns
-	OrderBy = internal.OrderBy
+	Columns    = internal.Columns
+	OrderBy    = internal.OrderBy
 	FilterFunc = internal.FilterFunc
 	UpdateFunc = internal.UpdateFunc
 	ColumnFunc = internal.ColumnFunc
-	OrderFunc = internal.OrderFunc
+	OrderFunc  = internal.OrderFunc
 )
 
 type PlatformPendingOrder struct {
@@ -24,6 +25,7 @@ type PlatformPendingOrder struct {
 func NewPlatformPendingOrder(db *gorm.DB) *PlatformPendingOrder {
 	return &PlatformPendingOrder{PlatformPendingOrder: internal.NewPlatformPendingOrder(db)}
 }
+
 var (
 	once     sync.Once
 	instance *PlatformPendingOrder

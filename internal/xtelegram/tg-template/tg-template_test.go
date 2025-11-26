@@ -3,10 +3,10 @@ package tgtemplate_test
 import (
 	"fmt"
 	"testing"
-	"tron_robot/internal/utils/expand"
-	tgtemplate "tron_robot/internal/xtelegram/tg-template"
 	"xbase/log"
 	"xbase/utils/xconv"
+	"xrobot/internal/utils/expand"
+	tgtemplate "xrobot/internal/xtelegram/tg-template"
 
 	"github.com/shopspring/decimal"
 )

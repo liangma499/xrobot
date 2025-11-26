@@ -22,10 +22,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	ag_binary "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	ag_binary "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	ag_solanago "tron_robot/internal/cryptocurrencies/solana/internal"
-	ag_text "tron_robot/internal/cryptocurrencies/solana/internal/text"
+	ag_solanago "xrobot/internal/cryptocurrencies/solana/internal"
+	ag_text "xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	ag_spew "github.com/davecgh/go-spew/spew"
 	ag_treeout "github.com/gagliardetto/treeout"

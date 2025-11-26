@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/ethereum/go-ethereum/crypto"

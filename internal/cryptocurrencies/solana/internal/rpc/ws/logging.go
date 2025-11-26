@@ -23,8 +23,8 @@ import (
 )
 
 var zlog *zap.Logger
-var traceEnabled = logging.IsTraceEnabled("solana-go", "tron_robot/internal/cryptocurrencies/solana/internal/rpc/ws")
+var traceEnabled = logging.IsTraceEnabled("solana-go", "xrobot/internal/cryptocurrencies/solana/internal/rpc/ws")
 
 func init() {
-	logging.Register("tron_robot/internal/cryptocurrencies/solana/internal/rpc/ws", &zlog)
+	logging.Register("xrobot/internal/cryptocurrencies/solana/internal/rpc/ws", &zlog)
 }

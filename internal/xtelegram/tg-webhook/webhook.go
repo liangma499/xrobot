@@ -1,11 +1,11 @@
 package tgwebhook
 
 import (
-	"tron_robot/internal/code"
-	optionBaseConfigCfg "tron_robot/internal/option/option-base-config"
-	"tron_robot/internal/xtypes"
 	"xbase/errors"
 	"xbase/log"
+	"xrobot/internal/code"
+	optionBaseConfigCfg "xrobot/internal/option/option-base-config"
+	"xrobot/internal/xtypes"
 )
 
 func SetWebHook(botToken, channelCode string) error {

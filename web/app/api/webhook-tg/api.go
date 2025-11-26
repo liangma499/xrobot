@@ -1,12 +1,12 @@
 package webhooktg
 
 import (
-	"tron_robot/internal/code"
-	"tron_robot/internal/http/response"
 	"xbase/log"
 	"xbase/transport"
+	"xrobot/internal/code"
+	"xrobot/internal/http/response"
 
-	"tron_robot/internal/xtelegram/telegram/types"
+	"xrobot/internal/xtelegram/telegram/types"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"

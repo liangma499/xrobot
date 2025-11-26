@@ -5,15 +5,15 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
-	"tron_robot/internal/code"
-	optionCurrencyDao "tron_robot/internal/dao/option-currency"
-	optionWithdrawCurrencyDao "tron_robot/internal/dao/option-withdraw-currency"
-	"tron_robot/internal/model"
-	"tron_robot/internal/xtypes"
 	"xbase/config"
 	"xbase/config/etcd"
 	"xbase/errors"
 	"xbase/log"
+	"xrobot/internal/code"
+	optionCurrencyDao "xrobot/internal/dao/option-currency"
+	optionWithdrawCurrencyDao "xrobot/internal/dao/option-withdraw-currency"
+	"xrobot/internal/model"
+	"xrobot/internal/xtypes"
 )
 
 const (

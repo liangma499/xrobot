@@ -3,8 +3,8 @@ package btcd_test
 import (
 	"fmt"
 	"testing"
-	"tron_robot/internal/cryptocurrencies/btcd/blockcypher"
-	getblockio "tron_robot/internal/cryptocurrencies/btcd/getblock-io"
+	"xrobot/internal/cryptocurrencies/btcd/blockcypher"
+	getblockio "xrobot/internal/cryptocurrencies/btcd/getblock-io"
 
 	"xbase/log"
 	"xbase/utils/xconv"

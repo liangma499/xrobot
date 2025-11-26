@@ -2,30 +2,30 @@ package user
 
 import (
 	"context"
-	"tron_robot/internal/code"
-	"tron_robot/internal/event/message"
+	"xrobot/internal/code"
+	"xrobot/internal/event/message"
 
 	"fmt"
 	"time"
-	identitycomp "tron_robot/internal/component/google/identity"
-	jwtcomp "tron_robot/internal/component/jwt"
-	"tron_robot/internal/xtypes"
 	"xbase/cache"
 	"xbase/cluster/mesh"
 	"xbase/errors"
 	"xbase/log"
 	"xbase/utils/jwt"
 	"xbase/utils/xconv"
+	identitycomp "xrobot/internal/component/google/identity"
+	jwtcomp "xrobot/internal/component/jwt"
+	"xrobot/internal/xtypes"
 
-	"tron_robot/internal/model"
-	"tron_robot/internal/service/user/pb"
+	"xrobot/internal/model"
+	"xrobot/internal/service/user/pb"
 
-	"tron_robot/internal/utils/xresource"
 	"xbase/utils/xtime"
+	"xrobot/internal/utils/xresource"
 
-	optionChannelDao "tron_robot/internal/dao/option-channel"
-	userDao "tron_robot/internal/dao/user"
-	userBaseDao "tron_robot/internal/dao/user-base"
+	optionChannelDao "xrobot/internal/dao/option-channel"
+	userDao "xrobot/internal/dao/user"
+	userBaseDao "xrobot/internal/dao/user-base"
 
 	"github.com/go-redis/redis/v8"
 )

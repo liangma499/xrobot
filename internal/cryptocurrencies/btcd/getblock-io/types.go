@@ -2,11 +2,11 @@ package getblockio
 
 import (
 	"encoding/hex"
-	"tron_robot/internal/code"
-	"tron_robot/internal/cryptocurrencies/btcd/getblock-io/internal"
-	optionCurrencyNetworkCfg "tron_robot/internal/option/option-currency-network"
-	"tron_robot/internal/xtypes"
 	"xbase/errors"
+	"xrobot/internal/code"
+	"xrobot/internal/cryptocurrencies/btcd/getblock-io/internal"
+	optionCurrencyNetworkCfg "xrobot/internal/option/option-currency-network"
+	"xrobot/internal/xtypes"
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcutil"

@@ -1,8 +1,8 @@
 package wallet
 
 import (
-	"tron_robot/internal/service/wallet/pb"
 	"xbase/transport"
+	"xrobot/internal/service/wallet/pb"
 
 	"github.com/smallnest/rpcx/client"
 )

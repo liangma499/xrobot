@@ -1,7 +1,7 @@
 package main
 
 import (
-	"tron_robot/tools/client/app"
+	"xrobot/tools/client/app"
 
 	"xbase"
 	"xbase/cluster/client"

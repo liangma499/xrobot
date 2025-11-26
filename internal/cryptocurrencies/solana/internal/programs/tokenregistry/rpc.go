@@ -21,8 +21,8 @@ import (
 	"context"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 )
 
 func GetTokenRegistryEntry(ctx context.Context, rpcCli *rpc.Client, mintAddress internal.PublicKey) (*TokenMeta, error) {

@@ -1,7 +1,7 @@
 package wallet
 
 import (
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 
 	"github.com/shopspring/decimal"
 )

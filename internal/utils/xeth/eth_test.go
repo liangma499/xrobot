@@ -3,7 +3,7 @@ package xeth_test
 import (
 	"context"
 	"testing"
-	"tron_robot/internal/utils/xeth"
+	"xrobot/internal/utils/xeth"
 )
 
 func Test_HeaderNumber(t *testing.T) {

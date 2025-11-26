@@ -21,7 +21,7 @@ import (
 	"os"
 	"strings"
 
-	zapbox "tron_robot/internal/cryptocurrencies/solana/internal/zap-box"
+	zapbox "xrobot/internal/cryptocurrencies/solana/internal/zap-box"
 
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -32,7 +32,7 @@ import (
 var zlog *zap.Logger
 
 func init() {
-	logging.Register("tron_robot/internal/cryptocurrencies/solana/internal/cmd/slnc/cmd", &zlog)
+	logging.Register("xrobot/internal/cryptocurrencies/solana/internal/cmd/slnc/cmd", &zlog)
 }
 
 func SetupLogger() {

@@ -17,10 +17,10 @@ package memo
 import (
 	"bytes"
 	"fmt"
-	ag_binary "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	ag_binary "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	ag_solanago "tron_robot/internal/cryptocurrencies/solana/internal"
-	ag_text "tron_robot/internal/cryptocurrencies/solana/internal/text"
+	ag_solanago "xrobot/internal/cryptocurrencies/solana/internal"
+	ag_text "xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gagliardetto/treeout"

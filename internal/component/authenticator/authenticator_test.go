@@ -3,7 +3,7 @@ package authenticator_test
 import (
 	"fmt"
 	"testing"
-	"tron_robot/internal/component/authenticator"
+	"xrobot/internal/component/authenticator"
 )
 
 func TestNewInstance(t *testing.T) {

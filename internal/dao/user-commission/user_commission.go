@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 	"sync"
-	mysqlimp "tron_robot/internal/component/mysql/mysql-default"
-	"tron_robot/internal/dao/user-commission/internal"
-	modelpkg "tron_robot/internal/model"
 	"xbase/utils/xtime"
+	mysqlimp "xrobot/internal/component/mysql/mysql-default"
+	"xrobot/internal/dao/user-commission/internal"
+	modelpkg "xrobot/internal/model"
 
 	"github.com/shopspring/decimal"
 	"gorm.io/gorm"

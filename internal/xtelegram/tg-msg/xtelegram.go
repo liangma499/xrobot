@@ -1,14 +1,14 @@
 package tgmsg
 
 import (
-	"tron_robot/internal/utils/expand"
+	"xrobot/internal/utils/expand"
 
-	"tron_robot/internal/code"
 	"xbase/errors"
+	"xrobot/internal/code"
 
-	"tron_robot/internal/xtelegram/telegram/telegram"
-	"tron_robot/internal/xtelegram/telegram/types"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
+	"xrobot/internal/xtelegram/telegram/telegram"
+	"xrobot/internal/xtelegram/telegram/types"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 func NewXTelegramMessage(botToken string, opts ...Option) (*XTelegramMessage, error) {

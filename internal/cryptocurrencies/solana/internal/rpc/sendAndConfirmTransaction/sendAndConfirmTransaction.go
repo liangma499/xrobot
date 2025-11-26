@@ -19,9 +19,9 @@ import (
 	"fmt"
 	"time"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc/ws"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc/ws"
 )
 
 // Send and wait for confirmation of a transaction.

@@ -2,7 +2,7 @@ package transfer
 
 import (
 	"time"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 
 	"github.com/shopspring/decimal"
 )

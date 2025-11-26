@@ -19,7 +19,7 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 )
 
 func main() {

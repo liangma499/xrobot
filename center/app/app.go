@@ -1,11 +1,11 @@
 package app
 
 import (
-	"tron_robot/center/app/internal/tron-task/expenditure"
-	"tron_robot/center/app/internal/tron-task/receivable"
-	verifytransaction "tron_robot/center/app/internal/tron-task/verify-transaction"
-	"tron_robot/internal/dao"
 	"xbase/cluster/node"
+	"xrobot/center/app/internal/tron-task/expenditure"
+	"xrobot/center/app/internal/tron-task/receivable"
+	verifytransaction "xrobot/center/app/internal/tron-task/verify-transaction"
+	"xrobot/internal/dao"
 )
 
 func Init(proxy *node.Proxy) {

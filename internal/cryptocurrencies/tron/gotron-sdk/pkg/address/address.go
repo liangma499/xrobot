@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"math/big"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
 
 	"github.com/ethereum/go-ethereum/crypto"
 )

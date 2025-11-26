@@ -3,8 +3,8 @@ package backblazeAvatar_test
 import (
 	"context"
 	"testing"
-	backblazeAvatar "tron_robot/internal/component/backblaze-avatar"
-	"tron_robot/internal/xtelegram/telegram/types"
+	backblazeAvatar "xrobot/internal/component/backblaze-avatar"
+	"xrobot/internal/xtelegram/telegram/types"
 )
 
 var ins = backblazeAvatar.NewInstance(&backblazeAvatar.Config{

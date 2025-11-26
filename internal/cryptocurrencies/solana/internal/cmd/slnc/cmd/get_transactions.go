@@ -22,13 +22,13 @@ import (
 	"fmt"
 	"os"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	_ "tron_robot/internal/cryptocurrencies/solana/internal/programs/serum"
-	_ "tron_robot/internal/cryptocurrencies/solana/internal/programs/system"
-	_ "tron_robot/internal/cryptocurrencies/solana/internal/programs/token"
-	_ "tron_robot/internal/cryptocurrencies/solana/internal/programs/tokenregistry"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	_ "xrobot/internal/cryptocurrencies/solana/internal/programs/serum"
+	_ "xrobot/internal/cryptocurrencies/solana/internal/programs/system"
+	_ "xrobot/internal/cryptocurrencies/solana/internal/programs/token"
+	_ "xrobot/internal/cryptocurrencies/solana/internal/programs/tokenregistry"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	"github.com/spf13/cobra"
 )

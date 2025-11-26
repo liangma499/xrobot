@@ -25,7 +25,7 @@ import (
 	"net/http"
 	"time"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc/jsonrpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc/jsonrpc"
 
 	"github.com/klauspost/compress/gzhttp"
 )

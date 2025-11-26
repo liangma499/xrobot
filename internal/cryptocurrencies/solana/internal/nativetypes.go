@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"io"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	"github.com/mostynb/zstdpool-freelist"
 	"github.com/mr-tron/base58"

@@ -17,7 +17,7 @@ package rpc
 import (
 	"context"
 	"errors"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // GetTokenAccountsByOwner returns all SPL Token accounts by token owner.

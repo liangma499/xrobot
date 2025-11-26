@@ -26,8 +26,8 @@ import (
 	"testing"
 	"time"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
 
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap"

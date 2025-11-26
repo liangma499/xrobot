@@ -8,7 +8,8 @@ package api
 
 import (
 	context "context"
-	core "tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	core "xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"

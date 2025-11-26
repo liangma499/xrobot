@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 	"testing"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	"tron_robot/internal/xtypes"
 	"xbase/log"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	"xrobot/internal/xtypes"
 
 	"github.com/go-redis/redis/v8"
 )

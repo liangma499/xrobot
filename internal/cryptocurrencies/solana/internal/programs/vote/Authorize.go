@@ -14,7 +14,7 @@
 
 package vote
 
-import "tron_robot/internal/cryptocurrencies/solana/internal"
+import "xrobot/internal/cryptocurrencies/solana/internal"
 
 type Authorize struct {
 	// TODO

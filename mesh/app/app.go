@@ -1,14 +1,14 @@
 package app
 
 import (
-	"tron_robot/internal/dao"
-	"tron_robot/internal/service/basic"
-	"tron_robot/internal/service/business"
-	"tron_robot/internal/service/cryptocurrency"
-	"tron_robot/internal/service/option"
-	"tron_robot/internal/service/user"
-	"tron_robot/internal/service/wallet"
 	"xbase/cluster/mesh"
+	"xrobot/internal/dao"
+	"xrobot/internal/service/basic"
+	"xrobot/internal/service/business"
+	"xrobot/internal/service/cryptocurrency"
+	"xrobot/internal/service/option"
+	"xrobot/internal/service/user"
+	"xrobot/internal/service/wallet"
 )
 
 func Init(proxy *mesh.Proxy) {

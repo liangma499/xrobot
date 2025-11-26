@@ -3,8 +3,8 @@ package identity_test
 import (
 	"context"
 	"testing"
-	"tron_robot/internal/component/google/identity"
 	"xbase/utils/xconv"
+	"xrobot/internal/component/google/identity"
 )
 
 func TestNewInstance(t *testing.T) {

@@ -3,7 +3,7 @@ package contract
 import (
 	"encoding/json"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 )
 
 // JSONABI data format

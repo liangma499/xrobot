@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"tron_robot/internal/cryptocurrencies/cryptobot-sdk-golang/cryptobot"
+	"xrobot/internal/cryptocurrencies/cryptobot-sdk-golang/cryptobot"
 )
 
 func getInvoices(client *cryptobot.Client) {

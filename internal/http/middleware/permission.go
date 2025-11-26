@@ -2,12 +2,12 @@ package middleware
 
 import (
 	"net/url"
-	"tron_robot/internal/code"
-	casbincomp "tron_robot/internal/http/casbin"
-	"tron_robot/internal/http/helper"
-	"tron_robot/internal/http/response"
 	"xbase/codes"
 	"xbase/utils/xconv"
+	"xrobot/internal/code"
+	casbincomp "xrobot/internal/http/casbin"
+	"xrobot/internal/http/helper"
+	"xrobot/internal/http/response"
 
 	"github.com/gin-gonic/gin"
 )

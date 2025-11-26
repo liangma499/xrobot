@@ -23,14 +23,14 @@ import (
 	"fmt"
 	"sort"
 
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/gagliardetto/treeout"
 	"github.com/mr-tron/base58"
 	"go.uber.org/zap"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/text"
+	"xrobot/internal/cryptocurrencies/solana/internal/text"
 )
 
 type Transaction struct {
@@ -581,7 +581,7 @@ func (tx *Transaction) EncodeTree(encoder *text.TreeEncoder) (int, error) {
 }
 
 // String returns a human-readable string representation of the transaction data.
-// To disable colors, set "tron_robot/internal/cryptocurrencies/solana/internal/text".DisableColors = true
+// To disable colors, set "xrobot/internal/cryptocurrencies/solana/internal/text".DisableColors = true
 func (tx *Transaction) String() string {
 	buf := new(bytes.Buffer)
 	_, err := tx.EncodeTree(text.NewTreeEncoder(buf, ""))

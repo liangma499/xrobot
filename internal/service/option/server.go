@@ -2,17 +2,17 @@ package option
 
 import (
 	"context"
-	optionBaseConfigCfg "tron_robot/internal/option/option-base-config"
-	optionCurrencyCfg "tron_robot/internal/option/option-currency"
-	optionCurrencyChannelCfg "tron_robot/internal/option/option-currency-channel"
-	optionCurrencyNetworkCfg "tron_robot/internal/option/option-currency-network"
-	optionTelegramCmdCfg "tron_robot/internal/option/option-telegram-cmd"
-	optionWithdrawCurrencyCfg "tron_robot/internal/option/option-withdraw-currency"
+	optionBaseConfigCfg "xrobot/internal/option/option-base-config"
+	optionCurrencyCfg "xrobot/internal/option/option-currency"
+	optionCurrencyChannelCfg "xrobot/internal/option/option-currency-channel"
+	optionCurrencyNetworkCfg "xrobot/internal/option/option-currency-network"
+	optionTelegramCmdCfg "xrobot/internal/option/option-telegram-cmd"
+	optionWithdrawCurrencyCfg "xrobot/internal/option/option-withdraw-currency"
 
 	"fmt"
-	"tron_robot/internal/service/option/pb"
-	"tron_robot/internal/xtypes"
 	"xbase/cluster/mesh"
+	"xrobot/internal/service/option/pb"
+	"xrobot/internal/xtypes"
 )
 
 // 配置中心数据 后台过来所有的配置走这个服务
@@ -62,7 +62,6 @@ func (s *Server) doLoadAllOption() {
 	if err := optionCurrencyNetworkCfg.SetOpts(context.Background(), xtypes.OptionOperate_LoadAll); err != nil {
 		panic(fmt.Sprintf("optionCurrencyNetworkCfg err:%v", err))
 	}
-
 
 	s.initWebhook()
 }

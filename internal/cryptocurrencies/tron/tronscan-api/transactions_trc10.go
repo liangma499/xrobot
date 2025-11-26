@@ -1,7 +1,7 @@
 package tronscanapi
 
 import (
-	"tron_robot/internal/cryptocurrencies/tron/internal"
+	"xrobot/internal/cryptocurrencies/tron/internal"
 
 	"github.com/shopspring/decimal"
 )

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"xbase/utils/xconv"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 )
 
 func (sol *solanaInfo) SolBlockNumber() (int64, error) {

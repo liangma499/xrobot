@@ -20,8 +20,8 @@ package serum
 import (
 	"math/big"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	"tron_robot/internal/cryptocurrencies/solana/internal/programs/token"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal/programs/token"
 )
 
 type MarketMeta struct {

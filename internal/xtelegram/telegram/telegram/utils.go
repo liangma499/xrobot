@@ -4,8 +4,8 @@ import (
 	"io"
 	"strings"
 
-	"tron_robot/internal/xtelegram/telegram/config"
-	"tron_robot/internal/xtelegram/telegram/types"
+	"xrobot/internal/xtelegram/telegram/config"
+	"xrobot/internal/xtelegram/telegram/types"
 )
 
 // ModeMarkdown return markdown mode

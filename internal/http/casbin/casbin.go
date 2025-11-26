@@ -2,10 +2,10 @@ package casbin
 
 import (
 	"sync"
-	mysqldefault "tron_robot/internal/component/mysql/mysql-default"
 	"xbase/etc"
 	"xbase/log"
 	casbin "xbase/utils/gorm-casbin"
+	mysqldefault "xrobot/internal/component/mysql/mysql-default"
 )
 
 var (

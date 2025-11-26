@@ -1,12 +1,12 @@
 package tgSet
 
 import (
-	"tron_robot/internal/code"
-	"tron_robot/internal/xtelegram/telegram/telegram"
-	"tron_robot/internal/xtelegram/telegram/types"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
 	"xbase/errors"
 	"xbase/log"
+	"xrobot/internal/code"
+	"xrobot/internal/xtelegram/telegram/telegram"
+	"xrobot/internal/xtelegram/telegram/types"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 func SetMyCommands(botToken string) error {

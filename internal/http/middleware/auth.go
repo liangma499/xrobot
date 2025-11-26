@@ -1,12 +1,12 @@
 package middleware
 
 import (
-	"tron_robot/internal/code"
-	jwtcomp "tron_robot/internal/component/jwt"
-	"tron_robot/internal/http/helper"
-	"tron_robot/internal/http/response"
 	"xbase/codes"
 	"xbase/utils/xconv"
+	"xrobot/internal/code"
+	jwtcomp "xrobot/internal/component/jwt"
+	"xrobot/internal/http/helper"
+	"xrobot/internal/http/response"
 
 	"xbase/utils/jwt"
 

@@ -2,7 +2,7 @@ package bnbscan
 
 import (
 	"context"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 
 	"fmt"
 	"math/big"

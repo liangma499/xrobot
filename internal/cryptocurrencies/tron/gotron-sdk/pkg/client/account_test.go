@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/client"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"

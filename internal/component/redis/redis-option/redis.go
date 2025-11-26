@@ -6,8 +6,8 @@ import (
 
 	"github.com/go-redis/redis/v8"
 
-	rediscomp "tron_robot/internal/component/redis"
 	cacheRedis "xbase/cache/redis"
+	rediscomp "xrobot/internal/component/redis"
 )
 
 var (

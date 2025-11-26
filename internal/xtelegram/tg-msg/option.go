@@ -1,8 +1,8 @@
 package tgmsg
 
 import (
-	tgbutton "tron_robot/internal/xtelegram/tg-button"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
+	tgbutton "xrobot/internal/xtelegram/tg-button"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
 )
 
 type Option func(o *telegramMessage)

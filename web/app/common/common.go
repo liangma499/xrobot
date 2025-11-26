@@ -1,14 +1,14 @@
 package common
 
 import (
-	"tron_robot/internal/code"
-	"tron_robot/internal/http/helper"
 	"xbase/errors"
 	"xbase/transport"
+	"xrobot/internal/code"
+	"xrobot/internal/http/helper"
 
-	usersvc "tron_robot/internal/service/user"
+	usersvc "xrobot/internal/service/user"
 
-	userpb "tron_robot/internal/service/user/pb"
+	userpb "xrobot/internal/service/user/pb"
 
 	"github.com/gin-gonic/gin"
 )

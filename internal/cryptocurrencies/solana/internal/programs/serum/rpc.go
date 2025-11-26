@@ -22,11 +22,11 @@ import (
 	"context"
 	"fmt"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc/ws"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc/ws"
 
 	rice "github.com/GeertJohan/go.rice"
 	"go.uber.org/zap"

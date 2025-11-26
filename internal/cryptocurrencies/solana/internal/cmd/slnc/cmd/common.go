@@ -19,9 +19,9 @@ import (
 	"os"
 	"strings"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/vault"
+	"xrobot/internal/cryptocurrencies/solana/internal/vault"
 
 	"github.com/spf13/viper"
 )

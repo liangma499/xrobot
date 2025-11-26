@@ -25,11 +25,11 @@ import (
 	"testing"
 	"time"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal/diff"
-	"tron_robot/internal/cryptocurrencies/solana/internal/rpc"
+	"xrobot/internal/cryptocurrencies/solana/internal/diff"
+	"xrobot/internal/cryptocurrencies/solana/internal/rpc"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -13,16 +13,16 @@ import (
 	"path/filepath"
 	"strings"
 	"sync"
-	"tron_robot/internal/code"
-	optionbaseconfig "tron_robot/internal/option/option-base-config"
-	"tron_robot/internal/utils/xfile"
-	"tron_robot/internal/utils/xhash"
-	"tron_robot/internal/utils/xstr"
-	"tron_robot/internal/xtelegram/telegram/types"
-	"tron_robot/internal/xtypes"
 	"xbase/errors"
 	"xbase/etc"
 	"xbase/log"
+	"xrobot/internal/code"
+	optionbaseconfig "xrobot/internal/option/option-base-config"
+	"xrobot/internal/utils/xfile"
+	"xrobot/internal/utils/xhash"
+	"xrobot/internal/utils/xstr"
+	"xrobot/internal/xtelegram/telegram/types"
+	"xrobot/internal/xtypes"
 )
 
 var (

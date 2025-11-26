@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

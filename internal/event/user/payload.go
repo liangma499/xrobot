@@ -1,7 +1,7 @@
 package user
 
 import (
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 )
 
 type RegisterPayload struct {

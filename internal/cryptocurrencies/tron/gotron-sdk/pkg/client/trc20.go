@@ -8,10 +8,10 @@ import (
 	"math/big"
 	"unicode/utf8"
 
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
-	"tron_robot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/address"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/common"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/api"
+	"xrobot/internal/cryptocurrencies/tron/gotron-sdk/pkg/proto/core"
 )
 
 const (

@@ -17,10 +17,10 @@ package memo
 import (
 	"errors"
 	"fmt"
-	ag_binary "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	ag_binary "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
-	ag_solanago "tron_robot/internal/cryptocurrencies/solana/internal"
-	ag_format "tron_robot/internal/cryptocurrencies/solana/internal/text/format"
+	ag_solanago "xrobot/internal/cryptocurrencies/solana/internal"
+	ag_format "xrobot/internal/cryptocurrencies/solana/internal/text/format"
 
 	ag_treeout "github.com/gagliardetto/treeout"
 )

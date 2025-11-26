@@ -18,7 +18,7 @@ package rpc
 
 import (
 	"context"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 // SendEncodedTransaction submits a signed base64 encoded transaction to the cluster for processing.

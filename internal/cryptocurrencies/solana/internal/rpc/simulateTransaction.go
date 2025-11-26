@@ -20,7 +20,7 @@ import (
 	"context"
 	"encoding/base64"
 	"fmt"
-	"tron_robot/internal/cryptocurrencies/solana/internal"
+	"xrobot/internal/cryptocurrencies/solana/internal"
 )
 
 type SimulateTransactionResponse struct {

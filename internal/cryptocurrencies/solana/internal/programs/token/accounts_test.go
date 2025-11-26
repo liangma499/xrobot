@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"tron_robot/internal/cryptocurrencies/solana/internal"
-	bin "tron_robot/internal/cryptocurrencies/solana/internal/binary"
+	"xrobot/internal/cryptocurrencies/solana/internal"
+	bin "xrobot/internal/cryptocurrencies/solana/internal/binary"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/require"

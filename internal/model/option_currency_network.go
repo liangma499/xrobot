@@ -2,7 +2,7 @@ package model
 
 import (
 	"time"
-	"tron_robot/internal/xtypes"
+	"xrobot/internal/xtypes"
 )
 
 //go:generate xgorm-dao-generator -model-dir=. -model-names=OptionCurrencyNetwork -dao-dir=../dao/ -sub-pkg-enable=true -mysql-pkg-path=/internal/component/mysql/mysql-default

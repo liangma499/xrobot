@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	optionbaseconfig "tron_robot/internal/option/option-base-config"
-	"tron_robot/internal/xtypes"
 	"xbase/utils/xrand"
 	"xbase/utils/xvalidate"
+	optionbaseconfig "xrobot/internal/option/option-base-config"
+	"xrobot/internal/xtypes"
 )
 
 // ToAvatarUrl 转换成头像地址

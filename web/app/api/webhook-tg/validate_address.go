@@ -5,10 +5,10 @@ import (
 	"encoding/hex"
 	"regexp"
 	"strings"
-	"tron_robot/internal/event/message"
-	tgtypes "tron_robot/internal/xtelegram/tg-types"
-	waitforinput "tron_robot/internal/xtelegram/wait-for-input"
 	"xbase/log"
+	"xrobot/internal/event/message"
+	tgtypes "xrobot/internal/xtelegram/tg-types"
+	waitforinput "xrobot/internal/xtelegram/wait-for-input"
 
 	"github.com/mr-tron/base58"
 )

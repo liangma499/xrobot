@@ -7,10 +7,11 @@
 package core
 
 import (
-	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
-	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
+
+	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
+	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 )
 
 const (
@@ -150,7 +151,7 @@ type SmartContract struct {
 	Name                       string             `protobuf:"bytes,7,opt,name=name,proto3" json:"name,omitempty"`
 	OriginEnergyLimit          int64              `protobuf:"varint,8,opt,name=origin_energy_limit,json=originEnergyLimit,proto3" json:"origin_energy_limit,omitempty"`
 	CodeHash                   []byte             `protobuf:"bytes,9,opt,name=code_hash,json=codeHash,proto3" json:"code_hash,omitempty"`
-	Trtron_robot                    []byte             `protobuf:"bytes,10,opt,name=trx_hash,json=trtron_robot,proto3" json:"trx_hash,omitempty"`
+	Trxrobot                   []byte             `protobuf:"bytes,10,opt,name=trx_hash,json=trxrobot,proto3" json:"trx_hash,omitempty"`
 	Version                    int32              `protobuf:"varint,11,opt,name=version,proto3" json:"version,omitempty"`
 }
 
@@ -249,9 +250,9 @@ func (x *SmartContract) GetCodeHash() []byte {
 	return nil
 }
 
-func (x *SmartContract) GetTrtron_robot() []byte {
+func (x *SmartContract) GetTrxrobot() []byte {
 	if x != nil {
-		return x.Trtron_robot
+		return x.Trxrobot
 	}
 	return nil
 }
